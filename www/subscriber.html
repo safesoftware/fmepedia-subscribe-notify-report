@@ -11,6 +11,11 @@
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script type="text/javascript">
 			/* The Google Maps Object */
+
+			var fmeserverurl = "demo.fmeserver.com";
+			//var token = "b75f8edfb40f95a8e41e11b293da7813e7fb9b06" Tested and failed on Nov 13, 2013 SM
+			var token = "7ef84feb2d8553c89e3f803052c340bd252b0e08"
+
 			var map;
 
 			/* The current overlay the user draws */
@@ -167,7 +172,7 @@
 					$("#prompt").overlay().load();
 
 				} else {
-					var url = "http://fmepedia2014-safe-software.fmecloud.com/fmerest/v2/notifications/topics/ems_subscribe/message/map?accept=json&detail=low?token=fb1c3ee6828e6814c75512dd4770a02e73d913b8"
+					var url = "http://" + fmeserverurl + "/fmerest/notifier/topics/ems_subscribe/publish?token=" + token;
 					/* Create the JSON object */
 					var jsonObj = { };
 					jsonObj["wkt"] = generateWktStr();
@@ -214,7 +219,7 @@
 
 					xhReq.open('POST', url, true);
 					xhReq.onreadystatechange = onResponse;
-					xhReq.send(jsonStr);
+					xhReq.send('"' + jsonStr + '"');
 
 				}
 			}
@@ -344,8 +349,8 @@
 				 */
 				var xhReq = createXMLHttpRequest();
 				// Request Variables
-				pHostName = "fmepedia2014-safe-software.fmecloud.com"
-				pUrlBase = "http://" + pHostName + "/fmedatastreaming/EEMS/report_web_form_bufferer.fmw?tm_priority=50&bufferamount=" + $("#eventRadius").val()
+				pUrlBase = "http://" + fmeserverurl + "/fmedatastreaming/fmepedia_demos/D002%20-%20report_web_form_bufferer.fmw?tm_priority=50&bufferamount=" + $("#eventRadius").val();
+
 				pHttpMethod = "POST"
 				// Create REST call
 				params = inGeomString;
