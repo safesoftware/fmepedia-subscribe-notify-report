@@ -167,7 +167,7 @@
 					$("#prompt").overlay().load();
 
 				} else {
-					var url = 'http://localhost/fmerest/notifier/topics/EMSSubscribe/publish?token=186d5ab1d596eb9286cc01d0f74a3e9408abbc65';
+					var url = 'http://fmepedia2014-safe-software.fmecloud.com/fmerest/notifier/topics/EMSSubscribe/publish?token=fb1c3ee6828e6814c75512dd4770a02e73d913b8';
 					/* Create the JSON object */
 					var jsonObj = { };
 					jsonObj["wkt"] = generateWktStr();
@@ -344,7 +344,7 @@
 				 */
 				var xhReq = createXMLHttpRequest();
 				// Request Variables
-				pHostName = "localhost"
+				pHostName = "fmepedia2014-safe-software.fmecloud.com"
 				pUrlBase = "http://" + pHostName + "/fmedatastreaming/EEMS/report_web_form_bufferer.fmw?tm_priority=50&bufferamount=" + $("#eventRadius").val()
 				pHttpMethod = "POST"
 				// Create REST call
