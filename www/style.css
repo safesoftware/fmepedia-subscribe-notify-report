@@ -1,0 +1,423 @@
+html, body {
+	height: 98%;
+	margin: 3px;
+}
+body, p, div, a {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "bitstream vera sans", "trebuchet ms", verdana, sans-serif;
+	font-size: 12px;
+}
+#map_canvas {
+	height: 100%;
+}
+@media print {
+	html, body {
+		height: auto;
+	}
+}
+/* some border radius for various elements and different browsers. CSS isn't perfect */
+.rounded, input, .error, select {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-khtml-border-radius: 5px;
+}
+
+/* tab pane layout */
+.pane {
+	padding: 50px;
+	display: none;
+	padding-top: 350px;
+}
+.description {
+	font-size: 11px;
+	color: #555;
+	padding: 10px 20px;
+}
+/* the form */
+#myform {
+	background-color: #777;
+	background-color: rgba(0, 0, 0, 0.55);
+	padding: 15px;
+	margin-right: 5px;
+	padding-bottom: 10px;
+	width: 600px;
+	float: left;
+	height: 96%;
+	box-shadow: 0 0 5px #F2F2F2;
+}
+#myform p {
+	clear: left;
+}
+fieldset {
+	float: left;
+	margin-left: 15px;
+	padding: 0;
+	border: 0;
+	width: 580px;
+}
+.last {
+	margin-right: 0;
+}
+legend {
+	color: #fff;
+	font-size: 20px;
+	text-shadow: 0 1px 0 #000;
+	padding: 0;
+	margin-bottom: -3px;
+}
+label {
+	display: block;
+	margin: 3px;
+	color: #ddd;
+	font-size: 11px;
+	text-shadow: 0 1px 0 #000;
+}
+input, textarea, select {
+	border: 1px solid;
+	border-color: #ccc #ddd #ddd #ccc;
+	padding: 6px;
+	background-color: rgba(255, 255, 255, 0.9);
+	font-size: 15px;
+	color: #555;
+	text-shadow: 0 1px 0 #fff;
+	width: 98%;
+}
+
+select{
+	width: 100%;	
+}
+
+input:focus, textarea:focus, select:focus {
+	background-color: #fff;
+	color: #000;
+}
+input[required], textarea[required], select[required] {
+	font-weight: bold;
+}
+/* validation error message */
+.error {
+	background-color: #E8FF6D;
+	padding: 4px;
+	color: #000;
+	-webkit-box-shadow: #000 0 0 12px;
+	-moz-box-shadow: #000 0 0 12px;
+}
+/* ..with a pure CSS arrow */
+.error em {
+	border: 10px solid;
+	border-color: #E8FF6D transparent transparent;
+	bottom: -17px;
+	display: block;
+	height: 0;
+	left: 10px;
+	position: absolute;
+	width: 0;
+}
+/* field with validation error */
+.invalid {
+	background-color: rgba(221, 233, 255, 0.898) !important;
+}
+/* date input */
+/* date input */
+.date {
+	float: left;
+	display: block;
+	border: 0;
+	background-color: transparent;
+	font-size: 18px;
+	color: #fff;
+	text-shadow: 0 0 1px #000;
+	width: 180px;
+	cursor: pointer;
+}
+.date:focus {
+	background-color: #333;
+	color: #fff;
+}
+/* datepicker trigger element */
+.picktrigger {
+	background: #333;
+	cursor: pointer;
+	display: block;
+	float: right;
+	height: 32px;
+	width: 32px;
+}
+.picktrigger:hover {
+	background: #000;
+}
+.high {
+	padding: 15px 0 0 15px;
+	clear: both;
+}
+.slider {
+	background: url("img/h30.png") repeat-x scroll 0 0 #3C72E6;
+	border: 1px solid #333333;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 0 8px #000000 inset;
+	clear: right;
+	cursor: pointer;
+	float: left;
+	height: 9px;
+	margin-top: 10px;
+	position: relative;
+	width: 510px;
+}
+.progress {
+	background-color: #C5FF00;
+	display: none;
+	height: 9px;
+	opacity: 0.6;
+}
+.handle {
+	background: url("img/h30.png") repeat-x scroll 0 0 #FFFFFF;
+	border: 1px solid #000000;
+	border-radius: 14px 14px 14px 14px;
+	box-shadow: 0 0 6px #000000;
+	cursor: move;
+	display: block;
+	height: 28px;
+	margin-top: 1px;
+	position: absolute;
+	top: -12px;
+	width: 28px;
+}
+.range {
+	border: 1px inset #DDDDDD;
+	border-radius: 5px 5px 5px 5px;
+	float: left;
+	font-size: 20px;
+	margin: 0 0 0 15px;
+	padding: 3px 0;
+	text-align: center;
+	width: 50px;
+}
+/* buttons */
+button {
+	background: #0150D1 url(img/h30.png) repeat-x 0 0;
+	border: 1px solid #d1ddc7;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 6px 15px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #000;
+	cursor: pointer;
+	height: auto;
+	outline: 0;
+}
+button:hover {
+	background-position: 0 -12px;
+}
+button:active {
+	background-position: 0 -30px;
+}
+{
+box-shadow: 0 0 30px #777777;
+display: none;
+font-size: 11px;
+height: 550px;
+position: absolute;
+width: 800px;
+}
+.rounded, input, .error, textarea, select {
+	border-radius: 5px 5px 5px 5px;
+}
+.pane {
+	display: none;
+	padding: 350px 50px 50px;
+}
+.description {
+	color: #555555;
+	font-size: 11px;
+	padding: 10px 20px;
+}
+.error, #calroot {
+	z-index: 10000;
+}
+div.close {
+	right: -15px;
+	top: -15px;
+}
+/* Calendar styling */
+#notificationDates, .active, #calroot {
+	-moz-border-radius: 4px;
+}
+#notificationDates {
+	background: url("img/h80.png") repeat scroll 0 0 #333333;
+	font-family: sans-serif;
+	height: 56px;
+	padding: 12px 0 12px 30px;
+	color: #ddd;
+	font-size: 11px;
+	margin: 0 auto;
+	-moz-box-shadow: 0 0 10px #666;
+	-webkit-box-shadow: 0 0 10px #666;
+}
+#notificationDates div {
+	float: left;
+	width: 230px;
+	display: block;
+	border: 1px solid transparent;
+	margin-right: 30px;
+}
+#notificationDates .active {
+	background-color: #fff;
+	color: #333;
+	border: 1px solid #ccc;
+	border-bottom: 0;
+}
+#notificationDates input {
+	padding-left: 0;
+}
+#notificationDates .active input {
+	background-color: #fff;
+	color: #333;
+}
+.caltrigger {
+	display: block;
+	width: 30px;
+	height: 32px;
+	float: left;
+	background: url(img/icon.jpg) no-repeat 0 0;
+	margin-top: -8px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.active .caltrigger {
+	background-position: 0 -32px;
+}
+#calroot {
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 0 15px #666666;
+	font-size: 11px;
+	margin-top: -1px;
+	padding: 2px;
+	width: 198px;
+	z-index: 10000;
+}
+#calhead {
+	height: 22px;
+	padding: 2px 0;
+}
+#caltitle {
+	color: #0150D1;
+	float: left;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	text-shadow: 0 1px 0 #DDDDDD;
+	width: 155px;
+}
+#calnext, #calprev {
+	background: url("img/prev.gif") no-repeat scroll center center transparent;
+	cursor: pointer;
+	display: block;
+	float: left;
+	height: 20px;
+	width: 20px;
+}
+#calnext {
+	background-image: url("img/next.gif");
+	float: right;
+}
+#calprev.caldisabled, #calnext.caldisabled {
+	visibility: hidden;
+}
+#caltitle select {
+	font-size: 10px;
+}
+#caldays {
+	border-bottom: 1px solid #DDDDDD;
+	height: 14px;
+}
+#caldays span {
+	display: block;
+	float: left;
+	text-align: center;
+	width: 28px;
+}
+#calweeks {
+	background-color: #FFFFFF;
+	margin-top: 4px;
+}
+.calweek {
+	clear: left;
+	height: 22px;
+}
+.calweek a {
+	border-radius: 3px 3px 3px 3px;
+	color: #666666;
+	display: block;
+	float: left;
+	font-size: 11px;
+	height: 20px;
+	line-height: 20px;
+	margin-left: 1px;
+	text-align: center;
+	text-decoration: none;
+	width: 27px;
+}
+.calweek a:hover, .calfocus {
+	background-color: #DDDDDD;
+}
+a.calsun {
+	color: red;
+}
+a.caloff {
+	color: #CCCCCC;
+}
+a.caloff:hover {
+	background-color: #F5F5FA;
+}
+a.caldisabled {
+	background-color: #EFEFEF !important;
+	color: #CCCCCC !important;
+	cursor: default;
+}
+#calcurrent {
+	background-color: #498CE2;
+	color: #FFFFFF;
+}
+#caltoday {
+	background-color: #333333;
+	color: #FFFFFF;
+}
+.modal {
+	background-color: #fff;
+	display: none;
+	width: 350px;
+	padding: 15px;
+	text-align: left;
+	border: 2px solid #333;
+	opacity: 0.8;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-box-shadow: 0 0 50px #ccc;
+	-webkit-box-shadow: 0 0 50px #ccc;
+}
+.modal h2 {
+	background: url(img/info.png) 0 50% no-repeat;
+	margin: 0px;
+	padding: 10px 0 10px 45px;
+	border-bottom: 1px solid #333;
+	font-size: 20px;
+}
+#prompt h2 {
+	background: url(img/warn.png) 0 50% no-repeat;
+}
+/* close button positioned on upper right corner */
+.modal .close {
+	background-image: url(img/close.png);
+	position: absolute;
+	right: -15px;
+	top: -15px;
+	cursor: pointer;
+	height: 35px;
+	width: 35px;
+}
+
