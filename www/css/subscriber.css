@@ -1,0 +1,12 @@
+#map_canvas {
+	height: 400px;
+	width:100%;
+}
+
+#subscription-form input, #subscription-form select{
+	width: 400px;
+}
+
+#date_range{
+	width: 359px !important;
+}

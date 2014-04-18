@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <head>
+    <!-- Safe Software, 2013 -->
+    <!-- http://safe.com -->
+    
+    <title>Subscriber, Report, Notify</title>
+    <!-- JQuery -->
+    <script src="libs/jquery-1.10.1.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="libs/bootstrap/js/bootstrap.js"></script>
+    <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Generic -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+
+  <body>
+
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+
+      <div class="navbar-header">
+        <a class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <div class="navbar-brand">FME Server<span class="hidden-tiny"> Demos</span></div>
+      </div> 
+
+      <div class="navbar-collapse collapse">
+        <a href="https://github.com/safesoftware/fmepedia-twitter-streaming" class="btn btn-default navbar-btn">
+          <img src="libs/github.png"> Fork GitHub
+        </a>
+        <a href="https://github.com/safesoftware/fmepedia-twitter-streaming/archive/master.zip" class="btn btn-default navbar-btn">
+          <span class="glyphicon glyphicon-download"></span> Download Zip
+        </a>
+      </div>
+      <span class="hidden-phone" id="safe-ribbon"><a href="http://www.safe.com">Powered by FME</a></span>
+    </div>
+  </div>
+
+
+    <div class="container">
+      <div class="row">
+        <h1>Subscribe, Report and Notify Demo</h1>
+        <p class="lead">Subscribe to receive email notifcations for a specific area. Whenever an alert is triggered in that area an email with details of the alert is sent.</p>
+        <br>
+        <div class="col-md-5 col-md-offset-1">
+          <div class="panel panel-default landing-panels">
+            <a href="subscriber.html">
+              <div class="panel-body">
+                <h2>Subscribe to a Geo Event</h2>
+                <img src="img/subscribe-geofence.png"></img>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="panel panel-default landing-panels">
+            <a href="reporter.html">
+              <div class="panel-body">
+                <h2>Trigger a Geo Event</h2>
+                <img src="img/report-geofence.png"></img>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </body>
+</html>

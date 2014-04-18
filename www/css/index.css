@@ -1,0 +1,19 @@
+.landing-panels{
+	text-align: center;
+  background-color: #FAFAFA;
+}
+
+
+.landing-panels img{
+  padding: 20px 0 20px 0;
+}
+
+
+.landing-panels:hover{
+  box-shadow: 1px 1px 5px #428bca;
+}
+
+.landing-panels a:hover{
+  text-decoration: none;
+  color: #428bca;
+}

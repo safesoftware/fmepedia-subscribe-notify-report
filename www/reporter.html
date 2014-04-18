@@ -1,411 +1,105 @@
 
 <html>
-	<head>
-		<title>FME Server Demo - Report an Event</title>
-		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-		<meta charset="UTF-8">
-		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=drawing"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-		<script src="http://cdn.jquerytools.org/1.2.6/all/jquery.tools.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="style.css" />
-		<script type="text/javascript">
-			
-			var fmeserverurl = "demo.fmeserver.com";
-			var token = "7ef84feb2d8553c89e3f803052c340bd252b0e08";
+<head>
+  <title>FME Server Demo - Report an Event</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=drawing"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-			/* The Google Maps Object */
-			var map;
+  <!-- Bootstrap -->
+  <script src="libs/bootstrap/js/bootstrap.js"></script>
+  <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-			/* The current overlay the user draws */
-			var currentOverlay = null;
+  <link rel="stylesheet" type="text/css" href="css/header.css" />
+  <link rel="stylesheet" type="text/css" href="css/reporter.css" />
+  <script src="js/reporter.js" type="text/javascript"></script>
+</head>
+<body>
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="container">
 
-			/* The buffer response stored as a polygon */
-			var bufferShape = null;
+      <div class="navbar-header">
+        <a class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <div class="navbar-brand">FME Server<span class="hidden-tiny"> Demos</span></div>
+      </div> 
 
-			/* The prompt message box */
-			var promptOverlay;
+      <div class="navbar-collapse collapse">
+        <a href="https://github.com/safesoftware/fmepedia-twitter-streaming" class="btn btn-default navbar-btn">
+          <img src="libs/github.png"> Fork GitHub
+        </a>
+        <a href="https://github.com/safesoftware/fmepedia-twitter-streaming/archive/master.zip" class="btn btn-default navbar-btn">
+          <span class="glyphicon glyphicon-download"></span> Download Zip
+        </a>
+      </div>
+      <span class="hidden-phone" id="safe-ribbon"><a href="http://www.safe.com">Powered by FME</a></span>
+    </div>
+  </div>
 
-			/* The success message box */
-			var successOverlay;
+ <div class="container">
+   <div class="row">
+     <div class="col-md-12">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li class="active">Reporter</li>
+        </ol>
+        <h1>Trigger Event</h1>
+        <p class="lead">Send a custom geo-alert out. Everyone who has subscribed to that area will receive the alert.</p>
+        <hr>        
+        <!-- overlay trigger element -->
+        <form id="reporter-form" onSubmit="return false;" >
+            <h4>
+            Set the Email from field.
+          </h4>
+          <div class="well">
+            <div class="form-group">            
+              <label for="txt_email">Email</label>
+              <input id="txt_email"  class="form-control" type="email" required="required" class="invalid" placeholder="Enter email"/>
+            </div>
+          </div>
 
-			/**
-			 * Called when the page first loads
-			 */
-			function initialize() {
-				/* Start - JQuery Toole Form Setup */
-
-				// validator. we use custom message layout with a CSS arrow
-				$("#myform").validator({
-					message : '<div><em/></div>',
-					position : 'top center',
-					offset : [-5, 177]
-				});
-				$(":range").rangeinput();
-
-				//Warn the user wih a prompt
-				promptOverlay = $("#prompt").overlay({
-
-					// some mask tweaks suitable for modal dialogs
-					mask : {
-						color : '#ebecff',
-						loadSpeed : 200,
-						opacity : 0.9
-					},
-					closeOnClick : false,
-					// load it immediately after the construction
-					load : false
-				});
-				successOverlay = $("#completed").overlay({
-
-					// some mask tweaks suitable for modal dialogs
-					mask : {
-						color : '#ebecff',
-						loadSpeed : 200,
-						opacity : 0.9
-					},
-
-					closeOnClick : false,
-					// load it immediately after the construction
-					load : false
-				});
-
-				/* Setup Google Maps Object */
-				var myOptions = {
-					center : new google.maps.LatLng(34.0, -50.0),
-					zoom : 3,
-					mapTypeId : google.maps.MapTypeId.ROADMAP
-				};
-				map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
-
-				/* Setup drawing manager */
-				var drawingManager = new google.maps.drawing.DrawingManager({
-					drawingMode : null,
-					drawingControl : true,
-					drawingControlOptions : {
-						position : google.maps.ControlPosition.TOP_CENTER,
-						drawingModes : [google.maps.drawing.OverlayType.POLYGON, google.maps.drawing.OverlayType.MARKER, google.maps.drawing.OverlayType.POLYLINE]
-					},
-					polygonOptions : {
-						strokeColor : "#FF0000",
-						strokeOpacity : 0.8,
-						strokeWeight : 2,
-						fillColor : "#FF0000",
-						fillOpacity : 0.35
-					}
-				});
-				drawingManager.setMap(map);
-
-				/**
-				 * Drawing listeners.
-				 * Called when the user draws a shape
-				 */
-				function drawingListener(inFeature, type) {
-
-					//Clear the previous overlays
-					if(currentOverlay) {
-						currentOverlay.geom.setMap(null);
-						if(bufferShape) {
-							bufferShape.setMap(null);
-						}
-					}
-
-					//Reset the drawing manager
-					drawingManager.setDrawingMode(null);
-
-					//Set current object to the current map geom
-					currentOverlay = {
-						"type" : type,
-						"geom" : inFeature
-					};
-
-				}
-
-				/* Setup drawing listeners for each drawing object */
-				google.maps.event.addListener(drawingManager, 'polygoncomplete', function(polygon) {
-					drawingListener(polygon, 'polygon');
-					streamBufferToMap(generateWktStr());
-				});
-
-				google.maps.event.addListener(drawingManager, 'markercomplete', function(point) {
-					drawingListener(point, 'point');
-					streamBufferToMap(generateWktStr());
-				});
-
-				google.maps.event.addListener(drawingManager, 'polylinecomplete', function(polyline) {
-					drawingListener(polyline, 'polyline');
-					streamBufferToMap(generateWktStr());
-				});
-			}
-
-			/**
-			 * Called when the user clicks the submit button on the form.
-			 */
-			function generateRequest() {
-				// If there is no overlay currently on the map
-				if(currentOverlay === null) {
-
-					//Warn the user wih a prompt
-					$("#prompt").overlay().load();
-
-				} else {
-
-					/* A valid geom exists so trigger the event */
-
-					var url = 'http://' + fmeserverurl +'/fmerest/notifier/topics/ems_web_update/publish?token=' + token;
-					
-					
-			
-
-					/* Create the JSON object */
-					var jsonObj = { };
-					jsonObj["wkt"] = generateWktStr();
-					jsonObj["email"] = $("#txt_email").val();
-					jsonObj["url"] = $("#txt_url").val();					
-					jsonObj["title"] = $("#eventTitle").val();
-					jsonObj["description"] = $("#eventDescription").val();
-					jsonObj["radius"] = $("#eventRadius").val();
-					jsonObj["extremity"] = $("#eventExtremity").val();
-					var jsonStr = JSON.stringify(jsonObj);
-
-					/*
-					 Commonly available on the web, this function was taken from:
-					 http://ajaxpatterns.org/XMLHttpRequest_Call
-					 */
-					function createXMLHttpRequest() {
-						try {
-							return new XMLHttpRequest();
-						} catch (e) {
-						}
-						try {
-							return new ActiveXObject("Msxml2.XMLHTTP");
-						} catch (e) {
-						}
-						alert("XMLHttpRequest not supported");
-						return null;
-					}
-
-					/*
-					 Display the result when complete
-					 */
-					function onResponse() {
-						// 4 indicates a result is ready
-						if(xhReq.readyState != 4)
-							return;
-
-						// Prompt the user with a success dialog.
-
-						$("#completed").overlay().load();
-
-						return;
-					}
-
-					/* Make the request */
-					var xhReq = createXMLHttpRequest();
-
-					xhReq.open('POST', url, true);
-					xhReq.onreadystatechange = onResponse;
-					xhReq.send('"' + jsonStr + '"');
-
-					streamBufferToMap(generateWktStr());
-				}
-			}
-			
-			function generateWktStr() {
-				var wktStr = '';
-
-				/* Create the WKT string. A different string for each GEOM type. */
-				switch(currentOverlay.type) {
-					case 'point':
-						var gLatLng = currentOverlay.geom.getPosition();
-						wktStr = 'POINT (' + gLatLng.lng() + ' ' + gLatLng.lat() + ')';
-
-						break;
-
-					case 'polygon':
-						var gglePolyArray = currentOverlay.geom.getPath();
-						gglePolyArray.forEach(function(item, index) {
-							if(index === (gglePolyArray.length - 1)) {
-								wktStr = wktStr + item.lng() + ' ' + item.lat();
-							} else {
-								wktStr = wktStr + item.lng() + ' ' + item.lat() + ', ';
-							}
-
-						});
-						wktStr = 'POLYGON ((' + wktStr + '))';
-						break;
-
-					case 'polyline':
-						var gglePolyArray = currentOverlay.geom.getPath();
-						gglePolyArray.forEach(function(item, index) {
-							if(index === (gglePolyArray.length - 1)) {
-								wktStr = wktStr + item.lng() + ' ' + item.lat();
-							} else {
-								wktStr = wktStr + item.lng() + ' ' + item.lat() + ', ';
-							}
-
-						});
-						wktStr = 'LINESTRING (' + wktStr + ')';
-						break;
-				}
-						
-				return wktStr;
-			}
-
-			/**
-			 * Calls the data streaming service which draws the buffer on the map
-			 * @inGeomString he WKT geometry string
-			 */
-			function streamBufferToMap(inGeomString) {
-
-				/**
-				 * Called when the POST is successful
-				 * @inPolygonString The GeoJSON returned from the data streaming service
-				 */
-				function addBufferPolygonToMap(inPolygonString) {
-					//Extract response and load into array
-					var startPoint = inPolygonString.lastIndexOf("(") + 1;
-					var endPoint = inPolygonString.indexOf(")")
-
-					var trimmedStr = inPolygonString.substr(startPoint, (endPoint - startPoint));
-					var arrayPoints = trimmedStr.split(",");
-					var arrayLatLng = [];
-
-					for(var i = arrayPoints.length - 1; i >= 0; i--) {
-
-						var arrayCoords = arrayPoints[i].split(" ");
-						arrayLatLng.push(new google.maps.LatLng(arrayCoords[1], arrayCoords[0]));
-
-					}
-					//Clear the previosu buffer
-					try {
-						bufferShape.setMap(null);
-					} catch (e) {
-
-					}
-
-					/* Add the shape to the map */
-					bufferShape = new google.maps.Polygon({
-						paths : arrayLatLng,
-						strokeColor : "#FF0000",
-						strokeOpacity : 0.8,
-						strokeWeight : 2,
-						fillColor : "#FF0000",
-						fillOpacity : 0.35
-					});
-					bufferShape.setMap(map);
-
-				};
-
-				/*
-				 Commonly available on the web, this function was taken from:
-				 http://ajaxpatterns.org/XMLHttpRequest_Call
-				 */
-				function createXMLHttpRequest() {
-					try {
-						return new XMLHttpRequest();
-					} catch (e) {
-					}
-					try {
-						return new ActiveXObject("Msxml2.XMLHTTP");
-					} catch (e) {
-					}
-					alert("XMLHttpRequest not supported");
-					return null;
-				}
-
-				/*
-				 Display the result when complete
-				 */
-				function onResponse() {
-					// 4 indicates a result is ready
-					if(xhReq.readyState != 4)
-						return;
-					// Get the response and display it
-					addBufferPolygonToMap(xhReq.responseText);
-
-					return;
-				}
-
-				/*
-				 Create the XMLHttpRequest object
-				 */
-				var xhReq = createXMLHttpRequest();
-				// Request Variables
-				pUrlBase = "http://" + fmeserverurl + "/fmedatastreaming/fmepedia_demos/D002%20-%20report_web_form_bufferer.fmw?tm_priority=50&bufferamount=" + $("#eventRadius").val()
-				pHttpMethod = "POST"
-				// Create REST call
-				params = inGeomString;
-
-				// Send request
-				xhReq.open(pHttpMethod, pUrlBase, true);
-				// xhReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
-				xhReq.onreadystatechange = onResponse;
-				xhReq.send(params);
-			}
-
-
-			google.maps.event.addDomListener(window, 'load', initialize);
-
-		</script>
-	</head>
-	<body>
-		<div class="modal" id="prompt">
-			<h2>Define an Event</h2>
-			<p>
-				Use the drawing tools to define a location for the event.
-			</p>
-		</div>
-		<div class="modal" id="completed">
-			<h2>Success</h2>
-			<p>
-				You have successfully created an event.
-			</p>
-		</div>
-		<!-- overlay trigger element -->
-		<form class="rounded" id="myform" onSubmit="return false;" >
-			<fieldset>
-				<legend>
-					1. Contact information
-				</legend>
-				<p>
-					<label>Email</label>
-					<input id="txt_email" type="email" required="required" class="invalid" />
-				</p>
-				<legend>
-					2. Event Details
-				</legend>
-				<p>
-					<label>Title</label>
-					<input type="text" required="required" id="eventTitle" />
-				</p>
-				<p>
-					<label>Description</label>
-					<textarea id="eventDescription" ></textarea>
-				</p>
-				<p>
-					<label>Buffer Radius (m)</label>
-					<input type="text" required="required" value="0" id="eventRadius" />
-				</p>
-				<p>
-					<label>URL</label>
-					<input id="txt_url" type="text" />
-				</p>
-				<p>
-					<label>Event Severity</label>
-					<input type="range" class="range" min="0" max="10" id="eventExtremity" value="5"/>
-				</p>
-				<legend>
-					3. Draw Event on Map
-				</legend>
-				</p>
-			</fieldset>
-			<p class="high">
-				<button class="rounded" type="submit" onClick="generateRequest()" >
-					Submit
-				</button>
-			</p>
-		</form>
-		<div id="map_canvas"></div>
-	</body>
+          <h4>
+            Event Details
+          </h4>
+          <div class="well">
+            <div class="form-group">   
+              <label for="eventTitle">Title</label>
+              <input type="text" class="form-control" required="required" id="eventTitle" />
+            </div>
+            <div class="form-group"> 
+              <label>Description</label>
+              <textarea class="form-control" id="eventDescription" ></textarea>                
+            </div>
+            <div class="form-group"> 
+              <label>Link to give more information associated with the event.</label>
+              <input id="txt_url" class="form-control" type="text" placeholder="Enter URL" />
+            </div>
+            <div class="form-group"> 
+              <label>Event Severity</label>
+              <input type="range" class="range" min="0" max="10" id="eventExtremity" value="5"/>
+            </div>
+          </div>
+          
+          <h4>
+            Draw Event on Map
+          </h4>
+          <div class="well">
+            <div class="form-group"> 
+              <label>Buffer Radius of Feature (m)</label>
+              <input type="text" class="form-control" required="required" value="0" id="eventRadius" />
+            </div>            
+            <div id="map_canvas"></div>
+          </div>
+          <button class="btn btn-primary btn-lg pull-right" type="submit" onClick="generateRequest()" >
+            Submit
+          </button>
+      </form>
+    </div>
+  </div>
+</body>
 </html>
