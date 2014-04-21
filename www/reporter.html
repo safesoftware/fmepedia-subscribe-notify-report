@@ -10,6 +10,9 @@
   <!-- Bootstrap -->
   <script src="libs/bootstrap/js/bootstrap.js"></script>
   <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+  <script src="libs/bootstrap/slider/bootstrap-slider.min.js"></script>
+  <link href="libs/bootstrap/slider/css/bootstrap-slider.css" rel="stylesheet" media="screen">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" type="text/css" href="css/header.css" />
@@ -81,7 +84,8 @@
             </div>
             <div class="form-group"> 
               <label>Event Severity</label>
-              <input type="range" class="range" min="0" max="10" id="eventExtremity" value="5"/>
+              <br>
+              <input id="eventExtremity" class="slider-event" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="10"/>
             </div>
           </div>
           

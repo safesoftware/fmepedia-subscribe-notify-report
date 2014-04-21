@@ -3,6 +3,18 @@
 	width:100%;
 }
 
+.well{
+	background-color: #E9E9E9;
+}
+
 #reporter-form input, #reporter-form textarea{
 	width: 400px;
+}
+
+.slider{
+	width:400px !important;
+}
+
+.slider-event .slider-selection {
+	background: #BABABA;
 }

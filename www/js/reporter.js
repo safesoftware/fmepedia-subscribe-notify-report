@@ -21,6 +21,11 @@ var successOverlay;
 */
 function initialize() {
   /* Start - JQuery Toole Form Setup */
+  $("input.slider-event").slider({
+    formater: function(value) {
+      return 'Event Extremity: ' + value;
+    }
+  });
 
   /* Setup Google Maps Object */
   var myOptions = {
@@ -117,7 +122,7 @@ $("#prompt").overlay().load();
   jsonObj["title"] = $("#eventTitle").val();
   jsonObj["description"] = $("#eventDescription").val();
   jsonObj["radius"] = $("#eventRadius").val();
-  jsonObj["extremity"] = $("#eventExtremity").val();
+  jsonObj["extremity"] = $("#eventExtremity").slider('getValue');
   var jsonStr = JSON.stringify(jsonObj);
 
 /*
