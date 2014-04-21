@@ -5,7 +5,7 @@
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta charset="UTF-8">
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=drawing"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="libs/jquery-1.10.1.js"></script>
 
   <!-- Bootstrap -->
   <script src="libs/bootstrap/js/bootstrap.js"></script>
@@ -14,6 +14,7 @@
   <script type="text/javascript" src="libs/daterangepicker/moment.js"></script>
   <script type="text/javascript" src="libs/daterangepicker/daterangepicker.js"></script>
   <link rel="stylesheet" type="text/css" href="libs/daterangepicker/daterangepicker-bs3.css" />
+  <script src="libs/validator.js"></script>
 
   <link rel="stylesheet" type="text/css" href="css/header.css" />
   <link rel="stylesheet" type="text/css" href="css/subscriber.css" />
@@ -57,14 +58,15 @@
       <h1>Configure Subscription</h1>
       <p class="lead">Subscribe to a specific location and receive notifications when an event occurs within that area.</p>
       <hr>
-      <form role="form" id="subscription-form" onSubmit="return false;" >
+      <form role="form" id="subscription-form" onSubmit="return false;"  data-toggle="validator" >
         <h4>
          Where do you want us to email the alerts to?
         </h4>
         <div class="well">
           <div class="form-group">
             <label for="txt_email">Email Address</label>
-            <input type="email" class="form-control" id="txt_email" placeholder="Enter email">
+            <input type="email" class="form-control" required id="txt_email" placeholder="Enter email">
+            <div class="help-block with-errors"></div> 
           </div>
         </div>
         <h4>
@@ -103,6 +105,40 @@
         </p>
       </form>
     </div>
+      <!-- Modal Geofence-->
+      <div class="modal fade" id="mapWarningModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="myModalLabel">Warning: Geofence Required</h4>
+            </div>
+            <div class="modal-body">
+              Please draw a geofence representing the area you wish to subscribe to on the map.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>      
+      <!-- Modal Success-->
+      <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="myModalLabel">Success: Subscription Successful</h4>
+            </div>
+            <div class="modal-body">
+              You are now subscribed to receive notifications when an event lies in the area you defined on the map.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>       
   </div>      
 </div>
 </body>

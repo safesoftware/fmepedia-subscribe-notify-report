@@ -50,111 +50,106 @@ function initialize() {
       fillColor : "#FF0000",
       fillOpacity : 0.35
     }
-});
-drawingManager.setMap(map);
+  });
+  drawingManager.setMap(map);
 
-/**
-* Drawing listeners.
-* Called when the user draws a shape
-*/
-function drawingListener(inFeature, type) {
+  /**
+  * Drawing listeners.
+  * Called when the user draws a shape
+  */
+  function drawingListener(inFeature, type) {
 
-//Clear the previous overlays
-if(currentOverlay) {
-  currentOverlay.geom.setMap(null);
-  if(bufferShape) {
-    bufferShape.setMap(null);
+    //Clear the previous overlays
+    if(currentOverlay) {
+      currentOverlay.geom.setMap(null);
+      if(bufferShape) {
+        bufferShape.setMap(null);
+      }
+    }
+
+    //Reset the drawing manager
+    drawingManager.setDrawingMode(null);
+
+    //Set current object to the current map geom
+    currentOverlay = {
+      "type" : type,
+      "geom" : inFeature
+    };
   }
-}
 
-//Reset the drawing manager
-drawingManager.setDrawingMode(null);
+  /* Setup drawing listeners for each drawing object */
+  google.maps.event.addListener(drawingManager, 'polygoncomplete', function(polygon) {
+    drawingListener(polygon, 'polygon');
+    streamBufferToMap(generateWktStr());
+  });
 
-//Set current object to the current map geom
-currentOverlay = {
-  "type" : type,
-  "geom" : inFeature
-};
+  google.maps.event.addListener(drawingManager, 'markercomplete', function(point) {
+    drawingListener(point, 'point');
+    streamBufferToMap(generateWktStr());
+  });
 
-}
-
-/* Setup drawing listeners for each drawing object */
-google.maps.event.addListener(drawingManager, 'polygoncomplete', function(polygon) {
-  drawingListener(polygon, 'polygon');
-  streamBufferToMap(generateWktStr());
-});
-
-google.maps.event.addListener(drawingManager, 'markercomplete', function(point) {
-  drawingListener(point, 'point');
-  streamBufferToMap(generateWktStr());
-});
-
-google.maps.event.addListener(drawingManager, 'polylinecomplete', function(polyline) {
-  drawingListener(polyline, 'polyline');
-  streamBufferToMap(generateWktStr());
-});
+  google.maps.event.addListener(drawingManager, 'polylinecomplete', function(polyline) {
+    drawingListener(polyline, 'polyline');
+    streamBufferToMap(generateWktStr());
+  });
 }
 
 /**
 * Called when the user clicks the submit button on the form.
 */
 function generateRequest() {
-// If there is no overlay currently on the map
-if(currentOverlay === null) {
 
-//Warn the user wih a prompt
-$("#prompt").overlay().load();
-
-} else {
-
-  /* A valid geom exists so trigger the event */
-
-  var url = 'http://' + fmeserverurl +'/fmerest/notifier/topics/ems_web_update/publish?token=' + token;
-
-
-
-
-  /* Create the JSON object */
-  var jsonObj = { };
-  jsonObj["wkt"] = generateWktStr();
-  jsonObj["email"] = $("#txt_email").val();
-  jsonObj["url"] = $("#txt_url").val();         
-  jsonObj["title"] = $("#eventTitle").val();
-  jsonObj["description"] = $("#eventDescription").val();
-  jsonObj["radius"] = $("#eventRadius").val();
-  jsonObj["extremity"] = $("#eventExtremity").slider('getValue');
-  var jsonStr = JSON.stringify(jsonObj);
-
-/*
-Commonly available on the web, this function was taken from:
-http://ajaxpatterns.org/XMLHttpRequest_Call
-*/
-function createXMLHttpRequest() {
-  try {
-    return new XMLHttpRequest();
-  } catch (e) {
+  /*
+  Commonly available on the web, this function was taken from:
+  http://ajaxpatterns.org/XMLHttpRequest_Call
+  */
+  function createXMLHttpRequest() {
+    try {
+      return new XMLHttpRequest();
+    } catch (e) {
+    }
+    try {
+      return new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (e) {
+    }
+    alert("XMLHttpRequest not supported");
+    return null;
   }
-  try {
-    return new ActiveXObject("Msxml2.XMLHTTP");
-  } catch (e) {
-  }
-  alert("XMLHttpRequest not supported");
-  return null;
-}
 
-/*
-Display the result when complete
-*/
-function onResponse() {
-  // 4 indicates a result is ready
-  if(xhReq.readyState != 4)
-    return;
+  /*
+  Display the result when complete
+  */
+  function onResponse() {
+    // 4 indicates a result is ready
+    if(xhReq.readyState != 4)
+      return;
 
     // Prompt the user with a success dialog.
+    $('#successModal').modal();
+    return;
+  }
 
-    $("#completed").overlay().load();
-      return;
-    }
+  // If there is no overlay currently on the map
+  if(currentOverlay === null) {
+
+    $('#mapWarningModal').modal();
+
+  } else {
+
+    /* A valid geom exists so trigger the event */
+
+    var url = 'http://' + fmeserverurl +'/fmerest/notifier/topics/ems_web_update/publish?token=' + token;
+
+    /* Create the JSON object */
+    var jsonObj = { };
+    jsonObj["wkt"] = generateWktStr();
+    jsonObj["email"] = $("#txt_email").val();
+    jsonObj["url"] = $("#txt_url").val();
+    jsonObj["title"] = $("#eventTitle").val();
+    jsonObj["description"] = $("#eventDescription").val();
+    jsonObj["radius"] = $("#eventRadius").val();
+    jsonObj["extremity"] = $("#eventExtremity").slider('getValue');
+    var jsonStr = JSON.stringify(jsonObj);
 
     /* Make the request */
     var xhReq = createXMLHttpRequest();
@@ -214,82 +209,82 @@ function generateWktStr() {
 */
 function streamBufferToMap(inGeomString) {
 
-/**
-* Called when the POST is successful
-* @inPolygonString The GeoJSON returned from the data streaming service
-*/
-function addBufferPolygonToMap(inPolygonString) {
-  //Extract response and load into array
-  var startPoint = inPolygonString.lastIndexOf("(") + 1;
-    var endPoint = inPolygonString.indexOf(")")
+  /**
+  * Called when the POST is successful
+  * @inPolygonString The GeoJSON returned from the data streaming service
+  */
+  function addBufferPolygonToMap(inPolygonString) {
+    //Extract response and load into array
+    var startPoint = inPolygonString.lastIndexOf("(") + 1;
+      var endPoint = inPolygonString.indexOf(")");
 
-    var trimmedStr = inPolygonString.substr(startPoint, (endPoint - startPoint));
-    var arrayPoints = trimmedStr.split(",");
-    var arrayLatLng = [];
+      var trimmedStr = inPolygonString.substr(startPoint, (endPoint - startPoint));
+      var arrayPoints = trimmedStr.split(",");
+      var arrayLatLng = [];
 
-    for(var i = arrayPoints.length - 1; i >= 0; i--) {
+      for(var i = arrayPoints.length - 1; i >= 0; i--) {
 
-      var arrayCoords = arrayPoints[i].split(" ");
-      arrayLatLng.push(new google.maps.LatLng(arrayCoords[1], arrayCoords[0]));
+        var arrayCoords = arrayPoints[i].split(" ");
+        arrayLatLng.push(new google.maps.LatLng(arrayCoords[1], arrayCoords[0]));
+
+      }
+    //Clear the previosu buffer
+    try {
+      bufferShape.setMap(null);
+    } catch (e) {
 
     }
-  //Clear the previosu buffer
-  try {
-    bufferShape.setMap(null);
-  } catch (e) {
+
+    /* Add the shape to the map */
+    bufferShape = new google.maps.Polygon({
+      paths : arrayLatLng,
+      strokeColor : "#FF0000",
+      strokeOpacity : 0.8,
+      strokeWeight : 2,
+      fillColor : "#FF0000",
+      fillOpacity : 0.35
+    });
+    bufferShape.setMap(map);
 
   }
 
-  /* Add the shape to the map */
-  bufferShape = new google.maps.Polygon({
-    paths : arrayLatLng,
-    strokeColor : "#FF0000",
-    strokeOpacity : 0.8,
-    strokeWeight : 2,
-    fillColor : "#FF0000",
-    fillOpacity : 0.35
-  });
-  bufferShape.setMap(map);
-
-};
-
-/*
-Commonly available on the web, this function was taken from:
-http://ajaxpatterns.org/XMLHttpRequest_Call
-*/
-function createXMLHttpRequest() {
-  try {
-    return new XMLHttpRequest();
-  } catch (e) {
+  /*
+  Commonly available on the web, this function was taken from:
+  http://ajaxpatterns.org/XMLHttpRequest_Call
+  */
+  function createXMLHttpRequest() {
+    try {
+      return new XMLHttpRequest();
+    } catch (e) {
+    }
+    try {
+      return new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (e) {
+    }
+    alert("XMLHttpRequest not supported");
+    return null;
   }
-  try {
-    return new ActiveXObject("Msxml2.XMLHTTP");
-  } catch (e) {
-  }
-  alert("XMLHttpRequest not supported");
-  return null;
-}
 
-/*
-Display the result when complete
-*/
-function onResponse() {
-  // 4 indicates a result is ready
-  if(xhReq.readyState != 4)
+  /*
+  Display the result when complete
+  */
+  function onResponse() {
+    // 4 indicates a result is ready
+    if(xhReq.readyState != 4)
+      return;
+    // Get the response and display it
+    addBufferPolygonToMap(xhReq.responseText);
+
     return;
-  // Get the response and display it
-  addBufferPolygonToMap(xhReq.responseText);
+  }
 
-  return;
-}
-
-/*
-Create the XMLHttpRequest object
-*/
-var xhReq = createXMLHttpRequest();
+  /*
+  Create the XMLHttpRequest object
+  */
+  var xhReq = createXMLHttpRequest();
   // Request Variables
-  pUrlBase = "http://" + fmeserverurl + "/fmedatastreaming/fmepedia_demos/D002%20-%20report_web_form_bufferer.fmw?tm_priority=50&bufferamount=" + $("#eventRadius").val()
-  pHttpMethod = "POST"
+  pUrlBase = "http://" + fmeserverurl + "/fmedatastreaming/fmepedia_demos/D002%20-%20report_web_form_bufferer.fmw?tm_priority=50&bufferamount=" + $("#eventRadius").val();
+  pHttpMethod = "POST";
   // Create REST call
   params = inGeomString;
 

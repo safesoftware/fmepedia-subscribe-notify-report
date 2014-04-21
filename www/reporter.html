@@ -5,13 +5,14 @@
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta charset="UTF-8">
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=drawing"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="libs/jquery-1.10.1.js"></script>
 
   <!-- Bootstrap -->
   <script src="libs/bootstrap/js/bootstrap.js"></script>
   <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
   <script src="libs/bootstrap/slider/bootstrap-slider.min.js"></script>
   <link href="libs/bootstrap/slider/css/bootstrap-slider.css" rel="stylesheet" media="screen">
+  <script src="libs/validator.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -55,14 +56,15 @@
         <p class="lead">Send a custom geo-alert out. Everyone who has subscribed to that area will receive the alert.</p>
         <hr>        
         <!-- overlay trigger element -->
-        <form id="reporter-form" onSubmit="return false;" >
+        <form id="reporter-form" onSubmit="return false;" data-toggle="validator" >
             <h4>
             Set the Email from field.
           </h4>
           <div class="well">
             <div class="form-group">            
               <label for="txt_email">Email</label>
-              <input id="txt_email"  class="form-control" type="email" required="required" class="invalid" placeholder="Enter email"/>
+              <input id="txt_email"  class="form-control" type="email" required class="invalid" placeholder="Enter email"/>
+              <div class="help-block with-errors"></div>
             </div>
           </div>
 
@@ -72,7 +74,8 @@
           <div class="well">
             <div class="form-group">   
               <label for="eventTitle">Title</label>
-              <input type="text" class="form-control" required="required" id="eventTitle" />
+              <input type="text" class="form-control" required id="eventTitle" />
+              <div class="help-block with-errors"></div>              
             </div>
             <div class="form-group"> 
               <label>Description</label>
@@ -95,7 +98,7 @@
           <div class="well">
             <div class="form-group"> 
               <label>Buffer Radius of Feature (m)</label>
-              <input type="text" class="form-control" required="required" value="0" id="eventRadius" />
+              <input type="text" class="form-control" value="0" id="eventRadius" />
             </div>            
             <div id="map_canvas"></div>
           </div>
@@ -103,6 +106,41 @@
             Submit
           </button>
       </form>
+
+      <!-- Modal Geofence-->
+      <div class="modal fade" id="mapWarningModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="myModalLabel">Warning: Geofence Required</h4>
+            </div>
+            <div class="modal-body">
+              Please draw a geofence representing the area you wish to send notifications to on the map.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>      
+      <!-- Modal Success-->
+      <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="myModalLabel">Success: Report submitted</h4>
+            </div>
+            <div class="modal-body">
+              The event has been submitted and all subscribers who are subscribed to that area will receive a notification.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>        
     </div>
   </div>
 </body>

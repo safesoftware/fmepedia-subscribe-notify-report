@@ -27,36 +27,6 @@ var fmeserverurl = "demo.fmeserver.com";
         /* Start - JQuery Toole Form Setup */
         $('#date_range').daterangepicker();
 
-
-        /**
-        //Warn the user wih a prompt
-        promptOverlay = $("#prompt").overlay({
-
-          // some mask tweaks suitable for modal dialogs
-          mask : {
-            color : '#ebecff',
-            loadSpeed : 200,
-            opacity : 0.9
-          },
-          closeOnClick : false,
-          // load it immediately after the construction
-          load : false
-        });
-        successOverlay = $("#completed").overlay({
-
-          // some mask tweaks suitable for modal dialogs
-          mask : {
-            color : '#ebecff',
-            loadSpeed : 200,
-            opacity : 0.9
-          },
-
-          closeOnClick : false,
-          // load it immediately after the construction
-          load : false
-        });
-        **/
-
         /* Setup Google Maps Object */
         var myOptions = {
           center : new google.maps.LatLng(34.0, -50.0),
@@ -134,24 +104,11 @@ var fmeserverurl = "demo.fmeserver.com";
        */
        function generateRequest() {
 
-
-        var url = "http://" + fmeserverurl + "/fmerest/notifier/topics/ems_subscribe/publish?token=" + token;
-        /* Create the JSON object */
-        var jsonObj = { };
-        jsonObj["wkt"] = generateWktStr();
-        jsonObj["email"] = $("#txt_email").val();
-        jsonObj["twitter"] = $("#txt_twitter").val();
-        jsonObj["startdate"] = $('#date_range').data('daterangepicker').startDate.utc().format();
-        jsonObj["enddate"] = $('#date_range').data('daterangepicker').endDate.utc().format();
-        jsonObj["radius"] = $("#eventRadius").val();
-        jsonObj["area_type"] = $('#notification_area option:selected').val();
-        var jsonStr = JSON.stringify(jsonObj);
-
         /*
-         Commonly available on the web, this function was taken from:
-         http://ajaxpatterns.org/XMLHttpRequest_Call
-         */
-         function createXMLHttpRequest() {
+        Commonly available on the web, this function was taken from:
+        http://ajaxpatterns.org/XMLHttpRequest_Call
+        */
+        function createXMLHttpRequest() {
           try {
             return new XMLHttpRequest();
           } catch (e) {
@@ -162,27 +119,45 @@ var fmeserverurl = "demo.fmeserver.com";
           }
           alert("XMLHttpRequest not supported");
           return null;
-         }
+        }
 
         /*
          Display the result when complete
          */
-         function onResponse() {
+        function onResponse() {
           // 4 indicates a result is ready
           if(xhReq.readyState != 4) {
-
             return;
           }
           // Get the response and display it
-          $("#completed").overlay().load();
+          $('#successModal').modal();
           return;
         }
 
-        var xhReq = createXMLHttpRequest();
+        // If there is no overlay currently on the map
+        if(currentOverlay === null) {
 
-        xhReq.open('POST', url, true);
-        xhReq.onreadystatechange = onResponse;
-        xhReq.send('"' + jsonStr + '"');
+          $('#mapWarningModal').modal();
+
+        } else {
+          var url = "http://" + fmeserverurl + "/fmerest/notifier/topics/ems_subscribe/publish?token=" + token;
+          /* Create the JSON object */
+          var jsonObj = { };
+          jsonObj["wkt"] = generateWktStr();
+          jsonObj["email"] = $("#txt_email").val();
+          jsonObj["twitter"] = $("#txt_twitter").val();
+          jsonObj["startdate"] = $('#date_range').data('daterangepicker').startDate.utc().format();
+          jsonObj["enddate"] = $('#date_range').data('daterangepicker').endDate.utc().format();
+          jsonObj["radius"] = $("#eventRadius").val();
+          jsonObj["area_type"] = $('#notification_area option:selected').val();
+          var jsonStr = JSON.stringify(jsonObj);
+
+          var xhReq = createXMLHttpRequest();
+
+          xhReq.open('POST', url, true);
+          xhReq.onreadystatechange = onResponse;
+          xhReq.send('"' + jsonStr + '"');
+        }
 
       }
 
@@ -244,7 +219,7 @@ var fmeserverurl = "demo.fmeserver.com";
          function addBufferPolygonToMap(inPolygonString) {
           //Extract response and load into array
           var startPoint = inPolygonString.lastIndexOf("(") + 1;
-            var endPoint = inPolygonString.indexOf(")")
+            var endPoint = inPolygonString.indexOf(")");
 
             var trimmedStr = inPolygonString.substr(startPoint, (endPoint - startPoint));
             var arrayPoints = trimmedStr.split(",");
@@ -274,7 +249,7 @@ var fmeserverurl = "demo.fmeserver.com";
           });
           bufferShape.setMap(map);
 
-        };
+        }
 
         /*
          Commonly available on the web, this function was taken from:
@@ -313,7 +288,7 @@ var fmeserverurl = "demo.fmeserver.com";
         // Request Variables
         pUrlBase = "http://" + fmeserverurl + "/fmedatastreaming/fmepedia_demos/D002%20-%20report_web_form_bufferer.fmw?tm_priority=50&bufferamount=" + $("#eventRadius").val();
 
-        pHttpMethod = "POST"
+        pHttpMethod = "POST";
         // Create REST call
         params = inGeomString;
 
