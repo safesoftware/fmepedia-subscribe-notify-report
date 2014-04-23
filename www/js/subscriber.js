@@ -2,8 +2,8 @@
 /* The Google Maps Object */
 
 var fmeserverurl = "demo.fmeserver.com";
-      //var token = "b75f8edfb40f95a8e41e11b293da7813e7fb9b06" Tested and failed on Nov 13, 2013 SM
-      var token = "7ef84feb2d8553c89e3f803052c340bd252b0e08"
+
+      var token = "7ef84feb2d8553c89e3f803052c340bd252b0e08";
 
       var map;
 
@@ -44,7 +44,7 @@ var fmeserverurl = "demo.fmeserver.com";
           drawingControl : true,
           drawingControlOptions : {
             position : google.maps.ControlPosition.TOP_CENTER,
-            drawingModes : [google.maps.drawing.OverlayType.POLYGON, google.maps.drawing.OverlayType.MARKER, google.maps.drawing.OverlayType.POLYLINE]
+            drawingModes : [google.maps.drawing.OverlayType.POLYGON]
           },
           polygonOptions : {
             strokeColor : "#FF0000",
@@ -85,17 +85,14 @@ var fmeserverurl = "demo.fmeserver.com";
         /* Setup drawing listeners for each drawing object */
         google.maps.event.addListener(drawingManager, 'polygoncomplete', function(polygon) {
           drawingListener(polygon, 'polygon');
-          streamBufferToMap(generateWktStr());
         });
 
         google.maps.event.addListener(drawingManager, 'markercomplete', function(point) {
           drawingListener(point, 'point');
-          streamBufferToMap(generateWktStr());
         });
 
         google.maps.event.addListener(drawingManager, 'polylinecomplete', function(polyline) {
           drawingListener(polyline, 'polyline');
-          streamBufferToMap(generateWktStr());
         });
       }
 
@@ -148,7 +145,6 @@ var fmeserverurl = "demo.fmeserver.com";
           jsonObj["twitter"] = $("#txt_twitter").val();
           jsonObj["startdate"] = $('#date_range').data('daterangepicker').startDate.utc().format();
           jsonObj["enddate"] = $('#date_range').data('daterangepicker').endDate.utc().format();
-          jsonObj["radius"] = $("#eventRadius").val();
           jsonObj["area_type"] = $('#notification_area option:selected').val();
           var jsonStr = JSON.stringify(jsonObj);
 
@@ -205,99 +201,5 @@ var fmeserverurl = "demo.fmeserver.com";
 
         return wktStr;
        }
-
-      /**
-       * Calls the data streaming service which draws the buffer on the map
-       * @inGeomString he WKT geometry string
-       */
-       function streamBufferToMap(inGeomString) {
-
-        /**
-         * Called when the POST is successful
-         * @inPolygonString The GeoJSON returned from the data streaming service
-         */
-         function addBufferPolygonToMap(inPolygonString) {
-          //Extract response and load into array
-          var startPoint = inPolygonString.lastIndexOf("(") + 1;
-            var endPoint = inPolygonString.indexOf(")");
-
-            var trimmedStr = inPolygonString.substr(startPoint, (endPoint - startPoint));
-            var arrayPoints = trimmedStr.split(",");
-            var arrayLatLng = [];
-
-            for(var i = arrayPoints.length - 1; i >= 0; i--) {
-
-              var arrayCoords = arrayPoints[i].split(" ");
-              arrayLatLng.push(new google.maps.LatLng(arrayCoords[1], arrayCoords[0]));
-
-            }
-          //Clear the previosu buffer
-          try {
-            bufferShape.setMap(null);
-          } catch (e) {
-
-          }
-
-          /* Add the shape to the map */
-          bufferShape = new google.maps.Polygon({
-            paths : arrayLatLng,
-            strokeColor : "#FF0000",
-            strokeOpacity : 0.8,
-            strokeWeight : 2,
-            fillColor : "#FF0000",
-            fillOpacity : 0.35
-          });
-          bufferShape.setMap(map);
-
-        }
-
-        /*
-         Commonly available on the web, this function was taken from:
-         http://ajaxpatterns.org/XMLHttpRequest_Call
-         */
-         function createXMLHttpRequest() {
-          try {
-            return new XMLHttpRequest();
-          } catch (e) {
-          }
-          try {
-            return new ActiveXObject("Msxml2.XMLHTTP");
-          } catch (e) {
-          }
-          alert("XMLHttpRequest not supported");
-          return null;
-         }
-
-        /*
-         Display the result when complete
-         */
-         function onResponse() {
-          // 4 indicates a result is ready
-          if(xhReq.readyState != 4)
-            return;
-          // Get the response and display it
-          addBufferPolygonToMap(xhReq.responseText);
-
-          return;
-        }
-
-        /*
-         Create the XMLHttpRequest object
-         */
-         var xhReq = createXMLHttpRequest();
-        // Request Variables
-        pUrlBase = "http://" + fmeserverurl + "/fmedatastreaming/fmepedia_demos/D002%20-%20report_web_form_bufferer.fmw?tm_priority=50&bufferamount=" + $("#eventRadius").val();
-
-        pHttpMethod = "POST";
-        // Create REST call
-        params = inGeomString;
-
-        // Send request
-        xhReq.open(pHttpMethod, pUrlBase, true);
-        // xhReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
-        xhReq.onreadystatechange = onResponse;
-        xhReq.send(params);
-      }
-
 
       google.maps.event.addDomListener(window, 'load', initialize);
