@@ -1,0 +1,950 @@
+#! <?xml version="1.0" encoding="windows-1252" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    "/Applications/FME 2014/Engine/fme" /Users/sharper/web_projects/fmepedia-subscribe-notify-report/fme/6_scheduled_delete_subscription.fmw
+#    
+#    
+#! PASSWORD=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! VIEW_POSITION="-42 0"
+#! SHOW_INFO_NODES="true"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! BEGIN_PYTHON=""
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! DESCRIPTION=""
+#! TITLE=""
+#! MAX_LOG_FEATURES="200"
+#! END_TCL=""
+#! FME_BUILD_NUM="14335"
+#! ZOOM_SCALE="100"
+#! CATEGORY=""
+#! REDIRECT_TERMINATORS="NONE"
+#! LEGAL_TERMS_CONDITIONS=""
+#! FME_REPROJECTION_ENGINE="FME"
+#! USAGE=""
+#! END_PYTHON=""
+#! HISTORY=""
+#! FME_DOCUMENT_PRIORGUID="3f9cdde0-fbed-11e3-962e-ff05ddde1c1d,2ec93dea-fbef-11e3-962e-ff05ddde1c1d,affbbc1c-fbef-11e3-962e-ff05ddde1c1d,b367412c-fbf0-11e3-962e-ff05ddde1c1d,3035205a-0945-11e4-8a74-a138ab286124,52822df6-0945-11e4-8a74-a138ab286124"
+#! DOC_TOP_LEFT="166 -581"
+#! REQUIREMENTS_KEYWORD=""
+#! SOURCE_ROUTING_FILE=""
+#! DESTINATION_ROUTING_FILE=""
+#! DESTINATION="NONE"
+#! LAST_SAVE_DATE="2014-07-11T14:51:52"
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
+#! WORKSPACE_VERSION="1"
+#! SOURCE="NONE"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP2 (20140527 - Build 14335 - macosx)"
+#! FME_SERVER_SERVICES=""
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! LOG_FILE=""
+#! REQUIREMENTS=""
+#! BEGIN_TCL=""
+#! DOC_EXTENTS="2251 39"
+#! FME_DOCUMENT_GUID="912de3b0-0945-11e4-8a74-a138ab286124"
+#! SHOW_ANNOTATIONS="true"
+#! IGNORE_READER_FAILURE="No"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! DATASET=""
+#! KEYWORD="GOOGLEFUSIONTABLES_3"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="googlefusiontables_type {FME_GEN_GEOMETRY} googlefusiontables_sql_where_clause &quot;&quot; googlefusiontables_sql_statement &quot;&quot;"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_text_size number fme_rotation number fme_feature_type text multi_reader_keyword text multi_reader_id number fme_dataset text multi_reader_full_id number fme_geometry fme_char(50) multi_reader_type text fme_fill_color text fme_basename text fme_text_string text fme_secondary_axis number fme_primary_axis number fme_sweep_angle number fme_start_angle number fme_type text googlefusiontables_type text fme_color text"
+#! DEFLINE_PARMS="&quot;GUI OPTIONAL TEXT_EDIT_SQL googlefusiontables_sql_where_clause WHERE Clause&quot; &quot;&quot; &quot;GUI OPTIONAL TEXT_EDIT_SQL googlefusiontables_sql_statement SELECT Statement&quot; &quot;&quot; "
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="14335"
+#! MAX_FEATURES=""
+#! COORDSYS=""
+#! MIN_FEATURES=""
+#! FEATURE_TYPES=""
+#! START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_PROXY"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_AUTHENTICATION"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="GOOGLEFUSIONTABLES_OUT_TRANSACTION_INTERVAL"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! DATASET=""
+#! KEYWORD="GOOGLEFUSIONTABLES_2"
+#! MULTI_GEOM_ALLOWED="true"
+#! ATTR_MAX_LENGTH="256"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="googlefusiontables_type {FME_GEN_GEOMETRY} googlefusiontables_drop_table NO googlefusiontables_truncate_table NO googlefusiontables_geometry_columns &quot;geom&quot; googlefusiontables_mode INHERIT_FROM_WRITER googlefusiontables_update_key_columns &quot;&quot;"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_secondary_axis number fme_dataset text fme_fill_color text fme_text_string text fme_feature_type text fme_text_size number fme_start_angle number fme_rotation number fme_type text fme_geometry fme_char(50) fme_db_operation text fme_primary_axis number fme_where text googlefusiontables_type text fme_sweep_angle number fme_basename text fme_color text"
+#! DEFLINE_PARMS="&quot;GUI FORCE_DEFS WHOLE_LINE CHOICE googlefusiontables_drop_table Yes%No Drop Existing Table&quot; No &quot;GUI FORCE_DEFS WHOLE_LINE CHOICE googlefusiontables_truncate_table Yes%No Truncate Existing Table&quot; No &quot;GUI OPTIONAL TEXT_ENCODED googlefusiontables_geometry_columns Geometry Column Name(s)&quot; geom &quot;GUI FORCE_DEFS WHOLE_LINE CHOICE googlefusiontables_mode INHERIT_FROM_WRITER%INSERT%UPDATE%DELETE Writer Mode&quot; INHERIT_FROM_WRITER &quot;GUI OPTIONAL TEXT_ENCODED googlefusiontables_update_key_columns Update Key Column(s)&quot; &quot;&quot; "
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS="\\&quot;{}[]"
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="14335"
+#! FANOUT_PREFIX=""
+#! COORDSYS=""
+#! FANOUT="No"
+#! FANOUT_SUFFIX=""
+#! FANOUT_ID_ATTR=""
+#! FANOUT_DIRECTORY=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_PROXY"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_AUTHENTICATION"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="GOOGLEFUSIONTABLES_OUT_TRANSACTION_INTERVAL"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_int32"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_int64"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_int16"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_real64"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_real32"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_date"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_time"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="location"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_int32"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_int64"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_int16"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_real64"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_real32"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_date"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_time"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="location"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_collection"
+#! FME_TYPE="fme_collection"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_point"
+#! FME_TYPE="fme_text"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_line"
+#! FME_TYPE="fme_line"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_polygon"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_polygon"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_solid"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_surface"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_raster"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_polygon"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_line"
+#! FME_TYPE="fme_arc"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_collection"
+#! FME_TYPE="fme_collection"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_point"
+#! FME_TYPE="fme_text"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_line"
+#! FME_TYPE="fme_line"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_polygon"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_polygon"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_solid"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_surface"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_raster"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_polygon"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_line"
+#! FME_TYPE="fme_arc"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="EMSActiveSubscriptions"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="14"
+#! FEAT_GEOMTYPE="googlefusiontables_no_geom googlefusiontables_point googlefusiontables_line googlefusiontables_polygon googlefusiontables_collection"
+#! POSITION="166 -554"
+#! ORDER="5e+14"
+#! COLLAPSED="true"
+#! KEYWORD="GOOGLEFUSIONTABLES_3"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="false"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="&lt;Unused&gt;" ATTR_TYPE="location" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="email" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="enddate" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="request_id" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="request_time" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="startdate" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="query_type" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_sql_where_clause" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_sql_statement" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="EMSActiveSubscriptions"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="17"
+#! FEAT_GEOMTYPE="googlefusiontables_no_geom googlefusiontables_point googlefusiontables_line googlefusiontables_polygon googlefusiontables_collection"
+#! POSITION="2417 -581"
+#! ORDER="5e+14"
+#! COLLAPSED="true"
+#! KEYWORD="GOOGLEFUSIONTABLES_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="&lt;Unused&gt;" ATTR_TYPE="location" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="email" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="enddate" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="request_id" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="request_time" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="startdate" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="query_type" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_drop_table" PARM_VALUE="No"/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_truncate_table" PARM_VALUE="No"/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_update_key_columns" PARM_VALUE="email&lt;comma&gt;request_id"/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_geometry_columns" PARM_VALUE="geom"/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_mode" PARM_VALUE="DELETE"/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <SERVICES>
+#! <SERVICE
+#! NAME="fmejobsubmitter"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="ADVANCED"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="FAILURE_TOPICS"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="HTTP_DATASET"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="NOTIFICATION_WRITER"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="SUCCESS_TOPICS"
+#! VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! </SERVICES>
+#! <REPOSITORY
+#! NAME="Photo-On-Map"
+#! />
+#! <ITEM
+#! NAME="6_scheduled_delete_subscription.fmw"
+#! />
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#! IDENTIFIER="15"
+#! NAME="Active Simply Check if expired"
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
+#! TOP_LEFT="688 -388"
+#! BOTTOM_RIGHT="2220 -963"
+#! STICKY="true"
+#! COLOUR="0.666667,0.894118,0.482353"
+#! CONTENTS="9 20 12 22 10 "
+#! />
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="9"
+#! TYPE="TestFilter"
+#! VERSION="0"
+#! POSITION="1728 -552"
+#! ORDER="9"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="SubscriptionExpired"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="&lt;Unused&gt;" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="enddate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="request_time" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="startdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="query_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="current_date" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="&lt;Unused&gt;" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="enddate" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="request_time" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="startdate" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="query_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="current_date" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE="BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;quote&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;enddate&lt;closeparen&gt;&lt;quote&gt;&lt;quote&gt;&lt;space&gt;&lt;lt&gt;&lt;space&gt;&lt;quote&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;current_date&lt;closeparen&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;,SubscriptionExpired"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="TestFilter"/>
+#! <XFORM_PARM PARM_NAME="DEFAULT_VALUE" PARM_VALUE="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="10"
+#! TYPE="TimeStamper"
+#! VERSION="0"
+#! POSITION="1241 -550"
+#! ORDER="12"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="&lt;Unused&gt;" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="enddate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="request_time" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="startdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="query_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="current_date" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="FMT" PARM_VALUE="FME Date (^Y^m^d)"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="TimeStamper"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TIME_ATTR" PARM_VALUE="current_date"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="20"
+#! TYPE="DateFormatter"
+#! VERSION="2"
+#! POSITION="741 -542"
+#! ORDER="14"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="&lt;Unused&gt;" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="enddate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="request_time" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="startdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="query_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="DATE_ATTR" PARM_VALUE="enddate"/>
+#! <XFORM_PARM PARM_NAME="FMT" PARM_VALUE="FME Date (%Y%m%d)"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="DateFormatter"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="12"
+#! SOURCE_NODE="10"
+#! TARGET_NODE="9"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="22"
+#! SOURCE_NODE="20"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="16"
+#! SOURCE_NODE="14"
+#! TARGET_NODE="20"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="18"
+#! SOURCE_NODE="9"
+#! TARGET_NODE="17"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE GOOGLEFUSIONTABLES_IN_REFRESH_TOKEN_GOOGLEFUSIONTABLES_3,GOOGLEFUSIONTABLES_IN_WHERE_CLAUSE_GOOGLEFUSIONTABLES_3,GOOGLEFUSIONTABLES_IN_EXPOSE_ATTRS_GROUP_GOOGLEFUSIONTABLES_3,GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MINX_GOOGLEFUSIONTABLES_3,GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MINY_GOOGLEFUSIONTABLES_3,GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MAXX_GOOGLEFUSIONTABLES_3,GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MAXY_GOOGLEFUSIONTABLES_3,GOOGLEFUSIONTABLES_IN_CLIP_TO_ENVELOPE_GOOGLEFUSIONTABLES_3,GOOGLEFUSIONTABLES_IN_BEGIN_SQL_GOOGLEFUSIONTABLES_3,GOOGLEFUSIONTABLES_IN_END_SQL_GOOGLEFUSIONTABLES_3,GOOGLEFUSIONTABLES_OUT_REFRESH_TOKEN_GOOGLEFUSIONTABLES_2,GOOGLEFUSIONTABLES_OUT_WRITER_MODE_GOOGLEFUSIONTABLES_2,GOOGLEFUSIONTABLES_OUT_TRANSACTION_INTERVAL_GOOGLEFUSIONTABLES_2,GOOGLEFUSIONTABLES_OUT_BEGIN_SQL_GOOGLEFUSIONTABLES_2,GOOGLEFUSIONTABLES_OUT_END_SQL_GOOGLEFUSIONTABLES_2
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE GOOGLEFUSIONTABLES
+READER_KEYWORD GOOGLEFUSIONTABLES_3
+READER_GEN_DIRECTIVES REFRESH_TOKEN,1<solidus>wVBREsRlxCZApMxxDFptH7HtCDPcbZ4yyYI25-cnx_8,EXPOSE_ATTRS_GROUP,,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MINY,0,TABLELIST,EMSActiveSubscriptions,WHERE_CLAUSE,,_MERGE_SCHEMAS,YES,GOOGLEFUSIONTABLES_EXPOSE_FORMAT_ATTRS,,CLIP_TO_ENVELOPE,NO,USE_SEARCH_ENVELOPE,NO,SEARCH_ENVELOPE_MAXX,0,CLIENT_ID,,CLIENT_SECRET,,SEARCH_ENVELOPE_MAXY,0
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} GOOGLEFUSIONTABLES
+MULTI_WRITER_KEYWORD{0} GOOGLEFUSIONTABLES_2
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GOOGLEFUSIONTABLES_3"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GOOGLEFUSIONTABLES GOOGLEFUSIONTABLES_3
+# ============================================================================
+# Just fake out a macro; it's not used
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_GOOGLEFUSIONTABLES_3 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GOOGLEFUSIONTABLES GOOGLEFUSIONTABLES_3
+DEFAULT_MACRO SourceDataset_GOOGLEFUSIONTABLES_3 NULL
+DEFAULT_MACRO GOOGLEFUSIONTABLES_IN_REFRESH_TOKEN_GOOGLEFUSIONTABLES_3 1/wVBREsRlxCZApMxxDFptH7HtCDPcbZ4yyYI25-cnx_8
+GOOGLEFUSIONTABLES_3_REFRESH_TOKEN "$(GOOGLEFUSIONTABLES_IN_REFRESH_TOKEN_GOOGLEFUSIONTABLES_3)"
+GUI OPTIONAL OAUTH GOOGLEFUSIONTABLES_IN_REFRESH_TOKEN_GOOGLEFUSIONTABLES_3 api_project,googlefusiontables,url,https:<solidus><solidus>accounts.google.com<solidus>o<solidus>oauth2<solidus>auth?response_type=code<amp>scope=https:<solidus><solidus>www.googleapis.com<solidus>auth<solidus>fusiontables<amp>redirect_uri=urn:ietf:wg:oauth:2.0:oob<amp>client_id=111883858131.apps.googleusercontent.com Refresh Token:
+DEFAULT_MACRO GOOGLEFUSIONTABLES_IN_CLIENT_ID_GOOGLEFUSIONTABLES_3 
+GOOGLEFUSIONTABLES_3_CLIENT_ID "$(GOOGLEFUSIONTABLES_IN_CLIENT_ID_GOOGLEFUSIONTABLES_3)"
+DEFAULT_MACRO GOOGLEFUSIONTABLES_IN_CLIENT_SECRET_GOOGLEFUSIONTABLES_3 
+GOOGLEFUSIONTABLES_3_CLIENT_SECRET "$(GOOGLEFUSIONTABLES_IN_CLIENT_SECRET_GOOGLEFUSIONTABLES_3)"
+DEFAULT_MACRO GOOGLEFUSIONTABLES_IN_WHERE_CLAUSE_GOOGLEFUSIONTABLES_3 
+GOOGLEFUSIONTABLES_3_WHERE_CLAUSE "$(GOOGLEFUSIONTABLES_IN_WHERE_CLAUSE_GOOGLEFUSIONTABLES_3)"
+GUI OPTIONAL TEXT_EDIT_SQL GOOGLEFUSIONTABLES_IN_WHERE_CLAUSE_GOOGLEFUSIONTABLES_3 Where Clause:
+DEFAULT_MACRO GOOGLEFUSIONTABLES_IN_EXPOSE_ATTRS_GROUP_GOOGLEFUSIONTABLES_3 
+GOOGLEFUSIONTABLES_3_EXPOSE_ATTRS_GROUP "$(GOOGLEFUSIONTABLES_IN_EXPOSE_ATTRS_GROUP_GOOGLEFUSIONTABLES_3)"
+GUI DISCLOSUREGROUP GOOGLEFUSIONTABLES_IN_EXPOSE_ATTRS_GROUP_GOOGLEFUSIONTABLES_3 GOOGLEFUSIONTABLES_EXPOSE_FORMAT_ATTRS Schema Attributes
+# Include this file in source setting section to add native search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MINX_GOOGLEFUSIONTABLES_3 0
+GOOGLEFUSIONTABLES_3_SEARCH_ENVELOPE "$(GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MINX_GOOGLEFUSIONTABLES_3)"
+GUI OPTIONAL FLOAT GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MINX_GOOGLEFUSIONTABLES_3 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MINY_GOOGLEFUSIONTABLES_3 0
+GOOGLEFUSIONTABLES_3_SEARCH_ENVELOPE "$(GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MINY_GOOGLEFUSIONTABLES_3)"
+GUI OPTIONAL FLOAT GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MINY_GOOGLEFUSIONTABLES_3 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MAXX_GOOGLEFUSIONTABLES_3 0
+GOOGLEFUSIONTABLES_3_SEARCH_ENVELOPE "$(GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MAXX_GOOGLEFUSIONTABLES_3)"
+GUI OPTIONAL FLOAT GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MAXX_GOOGLEFUSIONTABLES_3 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MAXY_GOOGLEFUSIONTABLES_3 0
+GOOGLEFUSIONTABLES_3_SEARCH_ENVELOPE "$(GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MAXY_GOOGLEFUSIONTABLES_3)"
+GUI OPTIONAL FLOAT GOOGLEFUSIONTABLES_IN_SEARCH_ENVELOPE_MAXY_GOOGLEFUSIONTABLES_3 Maximum Y:
+# ===========================================================================
+DEFAULT_MACRO GOOGLEFUSIONTABLES_IN_CLIP_TO_ENVELOPE_GOOGLEFUSIONTABLES_3 NO
+GOOGLEFUSIONTABLES_3_CLIP_TO_ENVELOPE "$(GOOGLEFUSIONTABLES_IN_CLIP_TO_ENVELOPE_GOOGLEFUSIONTABLES_3)"
+GUI OPTIONAL CHECKBOX GOOGLEFUSIONTABLES_IN_CLIP_TO_ENVELOPE_GOOGLEFUSIONTABLES_3 YES%NO Clip to Search Envelope
+DEFAULT_MACRO GOOGLEFUSIONTABLES_IN_BEGIN_SQL_GOOGLEFUSIONTABLES_3 
+GUI OPTIONAL TEXT_EDIT_SQL GOOGLEFUSIONTABLES_IN_BEGIN_SQL_GOOGLEFUSIONTABLES_3 SQL Statement to Execute Before Translation:
+GOOGLEFUSIONTABLES_3_BEGIN_SQL{0} "$(GOOGLEFUSIONTABLES_IN_BEGIN_SQL_GOOGLEFUSIONTABLES_3)"
+DEFAULT_MACRO GOOGLEFUSIONTABLES_IN_END_SQL_GOOGLEFUSIONTABLES_3 
+GUI OPTIONAL TEXT_EDIT_SQL GOOGLEFUSIONTABLES_IN_END_SQL_GOOGLEFUSIONTABLES_3 SQL Statement to Execute After Translation:
+GOOGLEFUSIONTABLES_3_END_SQL{0} "$(GOOGLEFUSIONTABLES_IN_END_SQL_GOOGLEFUSIONTABLES_3)"
+GOOGLEFUSIONTABLES_3_DATASET "$(SourceDataset_GOOGLEFUSIONTABLES_3)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GOOGLEFUSIONTABLES_2"
+#! END_WB_HEADER
+#! START_DEST_HEADER GOOGLEFUSIONTABLES GOOGLEFUSIONTABLES_2
+# ============================================================================
+# Just fake out a macro; it's not used
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_GOOGLEFUSIONTABLES_2 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER GOOGLEFUSIONTABLES GOOGLEFUSIONTABLES_2
+DEFAULT_MACRO DestDataset_GOOGLEFUSIONTABLES_2 NULL
+DEFAULT_MACRO GOOGLEFUSIONTABLES_OUT_REFRESH_TOKEN_GOOGLEFUSIONTABLES_2 1/1yY2n-liWR4J2jTiFxO8uven-Z_duY1c7q28gYYU2Cs
+GOOGLEFUSIONTABLES_2_REFRESH_TOKEN "$(GOOGLEFUSIONTABLES_OUT_REFRESH_TOKEN_GOOGLEFUSIONTABLES_2)"
+GUI OAUTH GOOGLEFUSIONTABLES_OUT_REFRESH_TOKEN_GOOGLEFUSIONTABLES_2 api_project,googlefusiontables,url,https:<solidus><solidus>accounts.google.com<solidus>o<solidus>oauth2<solidus>auth?response_type=code<amp>scope=https:<solidus><solidus>www.googleapis.com<solidus>auth<solidus>fusiontables<amp>redirect_uri=urn:ietf:wg:oauth:2.0:oob<amp>client_id=111883858131.apps.googleusercontent.com Refresh Token:
+DEFAULT_MACRO GOOGLEFUSIONTABLES_OUT_CLIENT_ID_GOOGLEFUSIONTABLES_2 
+GOOGLEFUSIONTABLES_2_CLIENT_ID "$(GOOGLEFUSIONTABLES_OUT_CLIENT_ID_GOOGLEFUSIONTABLES_2)"
+DEFAULT_MACRO GOOGLEFUSIONTABLES_OUT_CLIENT_SECRET_GOOGLEFUSIONTABLES_2 
+GOOGLEFUSIONTABLES_2_CLIENT_SECRET "$(GOOGLEFUSIONTABLES_OUT_CLIENT_SECRET_GOOGLEFUSIONTABLES_2)"
+DEFAULT_MACRO GOOGLEFUSIONTABLES_OUT_WRITER_MODE_GOOGLEFUSIONTABLES_2 INSERT
+GUI CHOICE GOOGLEFUSIONTABLES_OUT_WRITER_MODE_GOOGLEFUSIONTABLES_2 INSERT%UPDATE%DELETE Writer Mode:
+GOOGLEFUSIONTABLES_2_WRITER_MODE $(GOOGLEFUSIONTABLES_OUT_WRITER_MODE_GOOGLEFUSIONTABLES_2)
+DEFAULT_MACRO GOOGLEFUSIONTABLES_OUT_TRANSACTION_INTERVAL_GOOGLEFUSIONTABLES_2 400
+GUI TEXT GOOGLEFUSIONTABLES_OUT_TRANSACTION_INTERVAL_GOOGLEFUSIONTABLES_2 Transaction Interval:
+GOOGLEFUSIONTABLES_2_TRANSACTION_INTERVAL $(GOOGLEFUSIONTABLES_OUT_TRANSACTION_INTERVAL_GOOGLEFUSIONTABLES_2)
+DEFAULT_MACRO GOOGLEFUSIONTABLES_OUT_BEGIN_SQL_GOOGLEFUSIONTABLES_2 
+GUI OPTIONAL TEXT_EDIT_SQL GOOGLEFUSIONTABLES_OUT_BEGIN_SQL_GOOGLEFUSIONTABLES_2 SQL Statement to Execute Before Translation:
+GOOGLEFUSIONTABLES_2_BEGIN_SQL{0} "$(GOOGLEFUSIONTABLES_OUT_BEGIN_SQL_GOOGLEFUSIONTABLES_2)"
+DEFAULT_MACRO GOOGLEFUSIONTABLES_OUT_END_SQL_GOOGLEFUSIONTABLES_2 
+GUI OPTIONAL TEXT_EDIT_SQL GOOGLEFUSIONTABLES_OUT_END_SQL_GOOGLEFUSIONTABLES_2 SQL Statement to Execute After Translation:
+GOOGLEFUSIONTABLES_2_END_SQL{0} "$(GOOGLEFUSIONTABLES_OUT_END_SQL_GOOGLEFUSIONTABLES_2)"
+GOOGLEFUSIONTABLES_2_DATASET "$(DestDataset_GOOGLEFUSIONTABLES_2)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)6_scheduled_delete_subscription.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Datum
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_GOOGLEFUSIONTABLES_3 GOOGLEFUSIONTABLES_3
+DEFAULT_MACRO DATASET_KEYWORD_GOOGLEFUSIONTABLES_2 GOOGLEFUSIONTABLES_2
+# -------------------------------------------------------------------------
+
+GOOGLEFUSIONTABLES_3_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME 6_scheduled_delete_subscription
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+# -------------------------------------------------------------------------
+GOOGLEFUSIONTABLES_3_DEF EMSActiveSubscriptions   googlefusiontables_type      "googlefusiontables_no_geom googlefusiontables_point googlefusiontables_line googlefusiontables_polygon googlefusiontables_collection"   googlefusiontables_sql_where_clause ""   googlefusiontables_sql_statement ""   <Unused>                     location   email                        text   enddate                      text   request_id                   text   request_time                 text   startdate                    text   query_type                   text
+
+# -------------------------------------------------------------------------
+
+Lookup ___KnownFeatureTypes___   EMSActiveSubscriptions yes   "" no
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Unexpected Input Remover"   INPUT FEATURE_TYPE *   TEST @Lookup(___KnownFeatureTypes___,@FeatureType()) == yes   OUTPUT PASSED FEATURE_TYPE *
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Source -> Generic"    INPUT FEATURE_TYPE *    OUTPUT FEATURE_TYPE *       @Transform(GOOGLEFUSIONTABLES,FME_GENERIC,ALIAS_GEOMETRY)
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+Tcl2 proc DateFormatter_formatter {} {     catch {       set dateFormat {FME Date (%Y%m%d)};       if { [string compare $dateFormat {FME Date/Time (%Y%m%d%H%M%S)}] == 0 } {          set dateFormat {%Y%m%d%H%M%S};       } elseif { [string compare $dateFormat {FME Date (%Y%m%d)}] == 0} {          set dateFormat {%Y%m%d};       } elseif { [string compare $dateFormat {FME Time (%H%M%S)}] == 0} {          set dateFormat {%H%M%S};       } elseif { [string compare $dateFormat {XML Date (%Y-%m-%d)}] == 0} {          set dateFormat {%Y-%m-%d};       } elseif { [string compare $dateFormat {XML DateTime (%Y-%m-%dT%H:%M:%S)}] == 0} {          set dateFormat {%Y-%m-%dT%H:%M:%S};       } elseif { [string compare $dateFormat {XML Time (%H:%M:%S)}] == 0} {          set dateFormat {%H:%M:%S};       } elseif { [string compare $dateFormat {Locale Date (%c)}] == 0} {          set dateFormat {%c};       };       set attrs [split {enddate} {,}];       foreach attr $attrs {          set date [string trim [FME_GetAttribute $attr]];          set dateLen [string length $date];          if {$dateLen > 0} {             set attrFull $attr;             append attrFull .full;             set fullDate [FME_GetAttribute $attrFull];             if { [string compare -length $dateLen $date $fullDate] == 0 } {                set extra [string range $fullDate $dateLen end]000000;                set date [format {%s %s:%s:%s} $date [string range $extra 0 1]                                                     [string range $extra 2 3]                                                     [string range $extra 4 5]];             } elseif {($dateLen == 14) && [regexp {^[0-9]*$} $date]} {                set date [format {%sT%s} [string range $date 0 7]                                         [string range $date 8 end]];             };          };          set seconds [clock scan $date];          FME_SetAttribute $attr [clock format $seconds -format $dateFormat];       };     } }
+FACTORY_DEF * TeeFactory    FACTORY_NAME DateFormatter    INPUT  FEATURE_TYPE EMSActiveSubscriptions    OUTPUT FEATURE_TYPE DateFormatter_OUTPUT         @Tcl2(DateFormatter_formatter)
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc TimeStamper_formatGetter { inVal } {    if { [string compare $inVal {FME Date/Time (^Y^m^d^H^M^S)}] == 0 } {       return {^Y^m^d^H^M^S};    } elseif { [string compare $inVal {FME Date (^Y^m^d)}] == 0} {       return {^Y^m^d};    } elseif { [string compare $inVal {FME Time (^H^M^S)}] == 0} {       return {^H^M^S};    } elseif { [string compare $inVal {XML Date (^Y-^m-^d)}] == 0} {       return {^Y-^m-^d};    } elseif { [string compare $inVal {XML DateTime (^Y-^m-^dT^H:^M:^S)}] == 0} {       return {^Y-^m-^dT^H:^M:^S};    } elseif { [string compare $inVal {XML Time (^H:^M:^S)}] == 0} {       return {^H:^M:^S};    } elseif { [string compare $inVal {Locale Date (^c)}] == 0} {       return {^c};    };    return $inVal; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME TimeStamper    INPUT  FEATURE_TYPE DateFormatter_OUTPUT    OUTPUT FEATURE_TYPE TimeStamper_OUTPUT         @SupplyAttributes(ENCODED, current_date, @Timestamp(@Tcl2("TimeStamper_formatGetter {FME Date (^Y^m^d)} ")))
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME TestFilter    INPUT  FEATURE_TYPE TimeStamper_OUTPUT    OUTPUT FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_0
+
+FACTORY_DEF * TestFactory FACTORY_NAME TestFilter_TestFactory_0 INPUT FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_0 TEST @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>enddate<closeparen>,TestFilter) < @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>current_date<closeparen>,TestFilter) ENCODED BOOLEAN_OPERATOR OR COMPOSITE_TEST_EXPR <Unused> OUTPUT PASSED FEATURE_TYPE TestFilter_SubscriptionExpired OUTPUT FAILED FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_1
+FACTORY_DEF * TeeFactory FACTORY_NAME TestFilter_<lt>UNFILTERED<gt> INPUT FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_1 OUTPUT FEATURE_TYPE TestFilter_<lt>UNFILTERED<gt>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "TestFilter <lt>UNFILTERED<gt> Output Nuker"   INPUT FEATURE_TYPE TestFilter_<lt>UNFILTERED<gt>
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "TestFilter_SubscriptionExpired -> EMSActiveSubscriptions Correlator"    INPUT FEATURE_TYPE TestFilter_SubscriptionExpired    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GOOGLEFUSIONTABLES)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,EMSActiveSubscriptions)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Final Output Feature Type Router"   INPUT FEATURE_TYPE *   TEST @Value(__wb_out_feat_type__) != ""   OUTPUT PASSED FEATURE_TYPE *     @FeatureType(@Value(__wb_out_feat_type__))   OUTPUT FAILED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+GOOGLEFUSIONTABLES_2_DEF EMSActiveSubscriptions   googlefusiontables_type      "googlefusiontables_no_geom googlefusiontables_point googlefusiontables_line googlefusiontables_polygon googlefusiontables_collection"   googlefusiontables_drop_table No   googlefusiontables_truncate_table No   googlefusiontables_geometry_columns geom   googlefusiontables_mode      DELETE   googlefusiontables_update_key_columns email<comma>request_id   <Unused>                     location   email                        text   enddate                      text   request_id                   text   request_time                 text   startdate                    text   query_type                   text

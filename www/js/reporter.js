@@ -1,5 +1,5 @@
-var fmeserverurl = "demo.fmeserver.com";
-var token = "7ef84feb2d8553c89e3f803052c340bd252b0e08";
+var fmeserverurl = "fmepedia2014-safe-software.fmecloud.com";
+var token = "8be243c0fc2f5f34977050bdab57ebbdd3e72aa2";
 
 /* The Google Maps Object */
 var map;
@@ -41,7 +41,7 @@ function initialize() {
     drawingControl : true,
     drawingControlOptions : {
       position : google.maps.ControlPosition.TOP_CENTER,
-      drawingModes : [google.maps.drawing.OverlayType.POLYGON, google.maps.drawing.OverlayType.MARKER, google.maps.drawing.OverlayType.POLYLINE]
+      drawingModes : [google.maps.drawing.OverlayType.MARKER]
     },
     polygonOptions : {
       strokeColor : "#FF0000",
@@ -135,7 +135,7 @@ function generateRequest() {
 
     /* A valid geom exists so trigger the event */
 
-    var url = 'http://' + fmeserverurl +'/fmerest/notifier/topics/ems_web_update/publish?token=' + token;
+    var url = "https://" + fmeserverurl + "/fmerest/v2/notifications/topics/ems_web_update/message/raw?token=" + token;
 
     /* Create the JSON object */
     var jsonObj = { };

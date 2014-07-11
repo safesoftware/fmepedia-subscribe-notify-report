@@ -1,0 +1,2716 @@
+#! <?xml version="1.0" encoding="windows-1252" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    "/Applications/FME 2014/Engine/fme" /Users/sharper/web_projects/fmepedia-subscribe-notify-report/fme/2_subscription_confirm_email.fmw
+#          --SourceDataset_TEXTLINE Z:\DonStuff\DemoData\2013Demos\AlertReportingSystem\2ndIteration\data\subscriber_data\subscribe_confirm_email.txt
+#    
+#    
+#! PASSWORD=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! VIEW_POSITION="816 12"
+#! SHOW_INFO_NODES="true"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! BEGIN_PYTHON=""
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! DESCRIPTION=""
+#! TITLE=""
+#! MAX_LOG_FEATURES="200"
+#! END_TCL=""
+#! FME_BUILD_NUM="14335"
+#! ZOOM_SCALE="100"
+#! CATEGORY=""
+#! REDIRECT_TERMINATORS="NONE"
+#! LEGAL_TERMS_CONDITIONS=""
+#! FME_REPROJECTION_ENGINE="FME"
+#! USAGE=""
+#! END_PYTHON=""
+#! HISTORY=""
+#! FME_DOCUMENT_PRIORGUID="c288869e-0932-11e4-8166-9265d02fc3fd,67d539ac-0934-11e4-8166-9265d02fc3fd,6b1433f6-0935-11e4-8166-9265d02fc3fd,fda8046c-0945-11e4-8a74-a138ab286124"
+#! DOC_TOP_LEFT="150 -1891"
+#! REQUIREMENTS_KEYWORD=""
+#! SOURCE_ROUTING_FILE=""
+#! DESTINATION_ROUTING_FILE=""
+#! DESTINATION="NONE"
+#! LAST_SAVE_DATE="2014-07-11T15:04:02"
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
+#! WORKSPACE_VERSION="1"
+#! SOURCE="NONE"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP2 (20140527 - Build 14335 - macosx)"
+#! FME_SERVER_SERVICES=""
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! LOG_FILE=""
+#! REQUIREMENTS=""
+#! BEGIN_TCL=""
+#! DOC_EXTENTS="4227 1837"
+#! FME_DOCUMENT_GUID="44cf5d44-0947-11e4-9fb5-bca0d036bcdf"
+#! SHOW_ANNOTATIONS="true"
+#! IGNORE_READER_FAILURE="No"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="TEXTLINE"
+#! DATASET="$(SourceDataset_TEXTLINE)"
+#! KEYWORD="TEXTLINE_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="false"
+#! DEFLINE_TEMPLATE=""
+#! DEFLINE_ATTRS="false"
+#! EXPOSABLE_ATTRS="fme_text_size number(31,15) fme_rotation number(31,15) fme_feature_type char(50) multi_reader_keyword char(50) multi_reader_id number(11,0) fme_dataset char(50) multi_reader_full_id number(11,0) fme_geometry fme_char(50) multi_reader_type char(50) fme_fill_color char(50) fme_basename char(50) text_line_type char(64) fme_text_string char(50) fme_secondary_axis number(31,15) fme_primary_axis number(31,15) fme_sweep_angle number(31,15) fme_start_angle number(31,15) text_line_number number(11,0) fme_type char(50) text_line_eol char(10) fme_color char(50) text_line_length number(6,0)"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="12212"
+#! MAX_FEATURES=""
+#! COORDSYS=""
+#! MIN_FEATURES=""
+#! FEATURE_TYPES=""
+#! START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE=""
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! DATASET=""
+#! KEYWORD="GOOGLEFUSIONTABLES_DB_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="googlefusiontables_type {FME_GEN_GEOMETRY} googlefusiontables_sql_where_clause &quot;&quot; googlefusiontables_sql_statement &quot;&quot;"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_text_size number fme_rotation number fme_feature_type text multi_reader_keyword text multi_reader_id number fme_dataset text multi_reader_full_id number fme_geometry fme_char(50) multi_reader_type text fme_fill_color text fme_basename text fme_text_string text fme_secondary_axis number fme_primary_axis number fme_sweep_angle number fme_start_angle number fme_type text googlefusiontables_type text fme_color text"
+#! DEFLINE_PARMS="&quot;GUI OPTIONAL TEXT_EDIT_SQL googlefusiontables_sql_where_clause WHERE Clause&quot; &quot;&quot; &quot;GUI OPTIONAL TEXT_EDIT_SQL googlefusiontables_sql_statement SELECT Statement&quot; &quot;&quot; "
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="14335"
+#! MAX_FEATURES=""
+#! COORDSYS=""
+#! MIN_FEATURES=""
+#! FEATURE_TYPES=""
+#! START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_PROXY"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_AUTHENTICATION"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="GOOGLEFUSIONTABLES_DB_OUT_TRANSACTION_INTERVAL"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! DATASET=""
+#! KEYWORD="GOOGLEFUSIONTABLES_1"
+#! MULTI_GEOM_ALLOWED="true"
+#! ATTR_MAX_LENGTH="256"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="googlefusiontables_type {FME_GEN_GEOMETRY} googlefusiontables_drop_table NO googlefusiontables_truncate_table NO googlefusiontables_geometry_columns &quot;geom&quot; googlefusiontables_mode INHERIT_FROM_WRITER googlefusiontables_update_key_columns &quot;&quot;"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_secondary_axis number fme_dataset text fme_fill_color text fme_text_string text fme_feature_type text fme_text_size number fme_start_angle number fme_rotation number fme_type text fme_geometry fme_char(50) fme_db_operation text fme_primary_axis number fme_where text googlefusiontables_type text fme_sweep_angle number fme_basename text fme_color text"
+#! DEFLINE_PARMS="&quot;GUI FORCE_DEFS WHOLE_LINE CHOICE googlefusiontables_drop_table Yes%No Drop Existing Table&quot; No &quot;GUI FORCE_DEFS WHOLE_LINE CHOICE googlefusiontables_truncate_table Yes%No Truncate Existing Table&quot; No &quot;GUI OPTIONAL TEXT_ENCODED googlefusiontables_geometry_columns Geometry Column Name(s)&quot; geom &quot;GUI FORCE_DEFS WHOLE_LINE CHOICE googlefusiontables_mode INHERIT_FROM_WRITER%INSERT%UPDATE%DELETE Writer Mode&quot; INHERIT_FROM_WRITER &quot;GUI OPTIONAL TEXT_ENCODED googlefusiontables_update_key_columns Update Key Column(s)&quot; &quot;&quot; "
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS="\\&quot;{}[]"
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="14335"
+#! FANOUT_PREFIX=""
+#! COORDSYS=""
+#! FANOUT="No"
+#! FANOUT_SUFFIX=""
+#! FANOUT_ID_ATTR=""
+#! FANOUT_DIRECTORY=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_PROXY"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_AUTHENTICATION"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="GOOGLEFUSIONTABLES_OUT_TRANSACTION_INTERVAL"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="buffer"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(12)"
+#! FME_TYPE="fme_time"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(8)"
+#! FME_TYPE="fme_date"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(31,15)"
+#! FME_TYPE="fme_real64"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(15,7)"
+#! FME_TYPE="fme_real32"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_int32"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_int64"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="logical"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(6,0)"
+#! FME_TYPE="fme_int16"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(6,0)"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_int32"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_int64"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_int16"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_real64"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_real32"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_date"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_time"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="location"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_int64"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_int32"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_int64"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_int16"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_real64"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_real32"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_date"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_time"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="location"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_int64"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_point"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_line"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_area"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_text"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_arc"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_raster"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_surface"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_solid"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_collection"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_point"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_text"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_line"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_area"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_solid"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_surface"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_arc"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_raster"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="GOOGLEFUSIONTABLES_DB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_collection"
+#! FME_TYPE="fme_collection"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_point"
+#! FME_TYPE="fme_text"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_line"
+#! FME_TYPE="fme_line"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_polygon"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_polygon"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_solid"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_surface"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_raster"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_no_geom"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_polygon"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="googlefusiontables_line"
+#! FME_TYPE="fme_arc"
+#! FORMAT="GOOGLEFUSIONTABLES"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="text_line"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="1"
+#! FEAT_GEOMTYPE="text_line_none"
+#! POSITION="150 -153"
+#! ORDER="35"
+#! COLLAPSED="true"
+#! KEYWORD="TEXTLINE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="false"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="text_line_data" ATTR_TYPE="buffer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="EMSActiveSubscriptions"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="41"
+#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#! POSITION="3968 -151"
+#! ORDER="55"
+#! COLLAPSED="false"
+#! KEYWORD="GOOGLEFUSIONTABLES_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="email" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="enddate" ATTR_TYPE="datetime" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="request_id" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="request_time" ATTR_TYPE="datetime" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="startdate" ATTR_TYPE="datetime" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="query_type" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_drop_table" PARM_VALUE="No"/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_truncate_table" PARM_VALUE="No"/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_update_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_geometry_columns" PARM_VALUE="&lt;lt&gt;Unused&lt;gt&gt;"/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="EMSFutureSubscriptions"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="37"
+#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#! POSITION="4002 -743"
+#! ORDER="56"
+#! COLLAPSED="false"
+#! KEYWORD="GOOGLEFUSIONTABLES_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="email" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="enddate" ATTR_TYPE="datetime" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="request_id" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="request_time" ATTR_TYPE="datetime" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="startdate" ATTR_TYPE="datetime" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="query_type" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_drop_table" PARM_VALUE="No"/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_truncate_table" PARM_VALUE="No"/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_update_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_geometry_columns" PARM_VALUE="&lt;lt&gt;Unused&lt;gt&gt;"/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="EMSSubscriptionRequest"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="74"
+#! FEAT_GEOMTYPE="googlefusiontables_no_geom"
+#! POSITION="4019 -1891"
+#! ORDER="62"
+#! COLLAPSED="false"
+#! KEYWORD="GOOGLEFUSIONTABLES_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="email" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="wkt" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="request_id" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="request_time" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="enddate" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="startdate" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="query_type" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_drop_table" PARM_VALUE="No"/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_truncate_table" PARM_VALUE="No"/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_update_key_columns" PARM_VALUE="email&lt;comma&gt;request_id"/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_geometry_columns" PARM_VALUE="geom"/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_mode" PARM_VALUE="DELETE"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="EMSSubscriptionRequest"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="64"
+#! FEAT_GEOMTYPE="googlefusiontables_no_geom"
+#! POSITION="187 -1338"
+#! ORDER="5e+14"
+#! COLLAPSED="true"
+#! KEYWORD="GOOGLEFUSIONTABLES_DB_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="false"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geom" ATTR_TYPE="location" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="email" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="enddate" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="request_id" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="request_time" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="startdate" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="wkt" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="query_type" ATTR_TYPE="text" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_sql_where_clause" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="googlefusiontables_sql_statement" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <SERVICES>
+#! <SERVICE
+#! NAME="fmejobsubmitter"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="ADVANCED"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="FAILURE_TOPICS"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="HTTP_DATASET"
+#! VALUE="TEXTLINE_1"
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="NOTIFICATION_WRITER"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="SUCCESS_TOPICS"
+#! VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! <SERVICE
+#! NAME="fmenotification"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="ADVANCED"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="CONTENT_FORMAT"
+#! VALUE="JSON"
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="FAILURE_TOPICS"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="HTTP_DATASET"
+#! VALUE="TEXTLINE_1"
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="NOTIFICATION_WRITER"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="PUBLISHER"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="SUCCESS_TOPICS"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="TOPICS_LIST"
+#! VALUE="ems_subscribe_confirm"
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! </SERVICES>
+#! <REPOSITORY
+#! NAME="Subscribe Report Notify"
+#! />
+#! <ITEM
+#! NAME="2_subscription_confirm_email.fmw"
+#! />
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI MULTIFILE SourceDataset_TEXTLINE Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*.*)|*.* Source Text File(s):"
+#! DEFAULT_VALUE="Z:\DonStuff\DemoData\2013Demos\AlertReportingSystem\2ndIteration\data\subscriber_data\subscribe_confirm_email.txt"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI IGNORE TEXT_OR_ATTR SERVER_URL_HTML SERVER_URL_HTML:"
+#! DEFAULT_VALUE="http://demos.fmeserver.com/subscribe-notify-report/"
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI IGNORE STRING_OR_ATTR URL Web Connection URL:"
+#! DEFAULT_VALUE="https://fmepedia2014-safe-software.fmecloud.com"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI IGNORE TEXT_OR_ATTR repository_name Repository Name:"
+#! DEFAULT_VALUE="Subscribe%20Report%20Notify"
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI IGNORE PASSWORD_OR_ATTR HTTP_AUTH_PASSWORD HTTP_AUTH_PASSWORD:"
+#! DEFAULT_VALUE="fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszKWJ1S+BbjrB5iZzf1lBZpAeRq1ZJhSDUgzkgrPIC7GlglTH4FcrtLlB0XQ/1PmDCfBdRhEsXkVzrsL99qdNbnhFG5TXyjupUUPCb9ncwjYTVkUadgGCWhaVLyIPU2cN+C1d6P3zQC5UOtMELcnf4MSA23Ga99MCjQrEK0P2/Zp2qFds5R61B2WicosiJLzOCQlu7MTROVODfRVujkfoUJk1wQ87zsqH34TrlUqNKbX0I2gS2D890qxCDJ7XKsvWm5+xFfYxyPYAfBhg8NOPSGraR5NPOADYZIzRSWY7DZab3wm885B99/OL9+UKITrD0VE6qwvCObEe+UEB7Z+PLo2zTjS6wD1sV)"
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI IGNORE TEXT_OR_ATTR HTTP_AUTH_USERNAME HTTP_AUTH_USERNAMEHTTP_AUTH_USERNAME:"
+#! DEFAULT_VALUE="fmepediademos"
+#! IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#! IDENTIFIER="52"
+#! COMMENT_VALUE="&lt;html&gt;&lt;body&gt;EMSFutureSubscriptions&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="3857 -650"
+#! ORDER="40"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! TOP_LEFT="3857 -650"
+#! BOTTOM_RIGHT="3857 -650"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="8"
+#! COMMENT_TYPE="REGULAR"
+#! ANCHORED_NODE="37"
+#! />
+#! <COMMENT
+#! IDENTIFIER="36"
+#! COMMENT_VALUE="&lt;html&gt;&lt;body&gt;EMSActiveSubscriptions&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="3814 -54"
+#! ORDER="41"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! TOP_LEFT="3814 -54"
+#! BOTTOM_RIGHT="3814 -54"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="8"
+#! COMMENT_TYPE="REGULAR"
+#! ANCHORED_NODE="41"
+#! />
+#! <COMMENT
+#! IDENTIFIER="77"
+#! COMMENT_VALUE="&lt;html&gt;&lt;body&gt;EMSSubscriptionRequest&#13;&lt;br&gt;Request handled so delete.&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="4377 -1722"
+#! ORDER="61"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! TOP_LEFT="4377 -1722"
+#! BOTTOM_RIGHT="4377 -1722"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="8"
+#! COMMENT_TYPE="REGULAR"
+#! ANCHORED_NODE="74"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#! IDENTIFIER="22"
+#! NAME="Parse Email Request"
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
+#! TOP_LEFT="170 -373"
+#! BOTTOM_RIGHT="814 -1010"
+#! STICKY="true"
+#! COLOUR="0.356863,0.027451,0.109804"
+#! CONTENTS="61 2 62 "
+#! />
+#! <BOOKMARK
+#! IDENTIFIER="15"
+#! NAME="Get Confirmation ID"
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
+#! TOP_LEFT="826 -362"
+#! BOTTOM_RIGHT="1469 -1032"
+#! STICKY="true"
+#! COLOUR="0.886275,0.737255,0.592157"
+#! CONTENTS="69 45 46 "
+#! />
+#! <BOOKMARK
+#! IDENTIFIER="32"
+#! NAME="Send Confirmation Email"
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
+#! TOP_LEFT="2654 -15"
+#! BOTTOM_RIGHT="3840 -393"
+#! STICKY="true"
+#! COLOUR="0.447059,0.356863,0.0901961"
+#! CONTENTS="66 68 36 59 "
+#! />
+#! <BOOKMARK
+#! IDENTIFIER="60"
+#! NAME="SetupTimeBand"
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
+#! TOP_LEFT="2152 -467"
+#! BOTTOM_RIGHT="2808 -1384"
+#! STICKY="true"
+#! COLOUR="0.564706,0.309804,0.592157"
+#! CONTENTS="42 56 49 38 55 "
+#! />
+#! <BOOKMARK
+#! IDENTIFIER="28"
+#! NAME="Now Verify that the email,id combination is valid"
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;Replace with FeatureReader&lt;/body&gt;&lt;/html&gt;"
+#! TOP_LEFT="771 -1044"
+#! BOTTOM_RIGHT="1401 -1557"
+#! STICKY="true"
+#! COLOUR="0.937255,0.964706,0.411765"
+#! CONTENTS="71 "
+#! />
+#! <BOOKMARK
+#! IDENTIFIER="43"
+#! NAME="BuildGeometry"
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
+#! TOP_LEFT="1506 -460"
+#! BOTTOM_RIGHT="2136 -1001"
+#! STICKY="true"
+#! COLOUR="0.101961,0.282353,0.121569"
+#! CONTENTS="79 80 34 "
+#! />
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="2"
+#! TYPE="JSONFlattener"
+#! VERSION="1"
+#! POSITION="264 -453"
+#! ORDER="34"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PREFIX_STRING" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONFlattener"/>
+#! <XFORM_PARM PARM_NAME="RECURSIVE" PARM_VALUE="Yes"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="JSON_ATTR" PARM_VALUE="text_line_data"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="34"
+#! TYPE="GeometryReplacer"
+#! VERSION="2"
+#! POSITION="1586 -540"
+#! ORDER="39"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_attachment{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_received" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_sent" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="geom" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="enddate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="request_time" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="startdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="wkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="query_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="SRS_AXIS_ORDER_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ATTR" PARM_VALUE="wkt"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="GeometryReplacer"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="KIND_LONG" PARM_VALUE="OGC Well Known Text"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="42"
+#! TYPE="DateFormatter"
+#! VERSION="2"
+#! POSITION="2237 -762"
+#! ORDER="42"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_attachment{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_received" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_sent" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="geom" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="enddate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="request_time" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="startdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="wkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="query_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="current_date" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="DATE_ATTR" PARM_VALUE="enddate,startdate"/>
+#! <XFORM_PARM PARM_NAME="FMT" PARM_VALUE="FME Date (%Y%m%d)"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="DateFormatter"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="38"
+#! TYPE="TimeStamper"
+#! VERSION="0"
+#! POSITION="2232 -547"
+#! ORDER="43"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_attachment{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_received" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_sent" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="geom" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="enddate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="request_time" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="startdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="wkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="query_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="current_date" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="FMT" PARM_VALUE="FME Date (^Y^m^d)"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="TimeStamper"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TIME_ATTR" PARM_VALUE="current_date"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="55"
+#! TYPE="TestFilter"
+#! VERSION="0"
+#! POSITION="2258 -969"
+#! ORDER="44"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="Active"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_attachment{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_received" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_sent" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="geom" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="enddate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="request_time" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="startdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="wkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="query_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="current_date" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="Future"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_from" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_attachment{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_to" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_received" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_subject" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_sent" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="geom" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="enddate" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="request_time" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="startdate" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="wkt" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="query_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="current_date" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_from" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="email" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_attachment{}" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_to" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_received" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_subject" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_sent" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="geom" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="enddate" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="request_time" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="startdate" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="wkt" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="query_type" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="current_date" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE="BOOL_OP&lt;comma&gt;AND&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;quote&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;startdate&lt;closeparen&gt;&lt;quote&gt;&lt;quote&gt;&lt;space&gt;&lt;lt&gt;=&lt;space&gt;&lt;quote&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;current_date&lt;closeparen&gt;&lt;quote&gt;&lt;quote&gt;&lt;lf&gt;TEST&lt;space&gt;&lt;quote&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;enddate&lt;closeparen&gt;&lt;quote&gt;&lt;quote&gt;&lt;space&gt;&lt;gt&gt;=&lt;space&gt;&lt;quote&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;current_date&lt;closeparen&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;,Active,BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;quote&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;startdate&lt;closeparen&gt;&lt;quote&gt;&lt;quote&gt;&lt;space&gt;&lt;gt&gt;&lt;space&gt;&lt;quote&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;current_date&lt;closeparen&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;,Future"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="TestFilter"/>
+#! <XFORM_PARM PARM_NAME="DEFAULT_VALUE" PARM_VALUE="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="79"
+#! TYPE="CoordinateSystemSetter"
+#! VERSION="0"
+#! POSITION="1622 -743"
+#! ORDER="5e+14"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_attachment{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_received" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_sent" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="geom" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="enddate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="request_time" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="startdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="wkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="query_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE="LL84"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="CoordinateSystemSetter"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="59"
+#! TYPE="FMEServerNotifier"
+#! VERSION="2"
+#! POSITION="3270 -125"
+#! ORDER="5e+14"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_attachment{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_received" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_sent" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="geom" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="enddate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="request_time" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="startdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="wkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="query_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="current_date" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_replyto" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_paths" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_cc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subscriber_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_path_list" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_element_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_json" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_notifier_topic" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_notifier_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_from" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_attachment{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_to" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_received" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_subject" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_sent" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="geom" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="enddate" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="request_time" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="startdate" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="wkt" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="query_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="current_date" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_from" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_replyto" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_paths" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_cc" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_to" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_subject" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_subscriber_content" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_path_list" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_element_index" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_json" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_failure_reason" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_notifier_topic" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_notifier_content" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="$(HTTP_AUTH_PASSWORD)"/>
+#! <XFORM_PARM PARM_NAME="HTTP_AUTH_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="USERNAME" PARM_VALUE="$(HTTP_AUTH_USERNAME)"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FMEServerNotifier_2"/>
+#! <XFORM_PARM PARM_NAME="HTTP_REQUEST_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="BODY" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;text_line_data&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TOPIC" PARM_VALUE="ems_subscribe_activated"/>
+#! <XFORM_PARM PARM_NAME="URL" PARM_VALUE="$(URL)"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="66"
+#! TYPE="SubDocumentTransformer"
+#! VERSION="0"
+#! POSITION="2751 -133"
+#! ORDER="5e+14"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_attachment{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_received" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_sent" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="geom" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="enddate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="request_time" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="startdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="wkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="query_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="current_date" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_replyto" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_paths" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_cc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subscriber_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_path_list" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_element_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_json" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="email_replyto" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="email_cc" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUB_DOC_NAME" PARM_VALUE="FMEServerEmailGenerator"/>
+#! <XFORM_PARM PARM_NAME="email_subject" PARM_VALUE="FMEpedia&lt;space&gt;demo:&lt;space&gt;FME&lt;space&gt;Server&lt;space&gt;alert&lt;space&gt;request&lt;space&gt;has&lt;space&gt;been&lt;space&gt;activated"/>
+#! <XFORM_PARM PARM_NAME="__COMPOUND_PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="email_to" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;email&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FMEServerEmailGenerator"/>
+#! <XFORM_PARM PARM_NAME="email_from" PARM_VALUE="subscribe-reprt-notify-demo@fmepedia2014-safe-software.fmecloud.com"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="email_subscriber_content" PARM_VALUE="&lt;lt&gt;p&lt;gt&gt;You&lt;space&gt;&lt;space&gt;are&lt;space&gt;now&lt;space&gt;registered&lt;space&gt;to&lt;space&gt;receive&lt;space&gt;notifcation&lt;space&gt;alerts&lt;space&gt;from&lt;space&gt;$(SERVER_URL_HTML)index.html&lt;space&gt;at&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;request_time&lt;closeparen&gt;.&lt;space&gt;&lt;lt&gt;&lt;solidus&gt;p&lt;gt&gt;&lt;lf&gt;&lt;lf&gt;&lt;lt&gt;p&lt;gt&gt;The&lt;space&gt;details&lt;space&gt;of&lt;space&gt;the&lt;space&gt;request&lt;space&gt;are&lt;space&gt;as&lt;space&gt;follows:&lt;space&gt;&lt;lf&gt;&lt;lf&gt;&lt;lt&gt;ul&lt;gt&gt;&lt;lf&gt;&lt;lt&gt;li&lt;gt&gt;email:&lt;at&gt;Value&lt;openparen&gt;email&lt;closeparen&gt;&lt;lt&gt;&lt;solidus&gt;li&lt;gt&gt;&lt;space&gt;&lt;lf&gt;&lt;lt&gt;li&lt;gt&gt;StartDate:&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;startdate&lt;closeparen&gt;&lt;lt&gt;&lt;solidus&gt;li&lt;gt&gt;&lt;lf&gt;&lt;lt&gt;li&lt;gt&gt;EndDate:&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;enddate&lt;closeparen&gt;&lt;lt&gt;&lt;solidus&gt;li&lt;gt&gt;&lt;lf&gt;&lt;lt&gt;li&lt;gt&gt;QueryType:&lt;at&gt;Value&lt;openparen&gt;query_type&lt;closeparen&gt;&lt;lt&gt;&lt;solidus&gt;li&lt;gt&gt;&lt;lf&gt;&lt;lf&gt;&lt;lt&gt;br&lt;gt&gt;&lt;lf&gt;----&lt;space&gt;&lt;space&gt;UNSUBSCRIBE&lt;space&gt;&lt;space&gt;-----&lt;space&gt;&lt;lf&gt;&lt;lf&gt;&lt;lt&gt;p&lt;gt&gt;To&lt;space&gt;unsubscribe&lt;space&gt;to&lt;space&gt;these&lt;space&gt;notifications&lt;space&gt;click&lt;space&gt;the&lt;space&gt;link&lt;space&gt;below.&lt;lt&gt;&lt;solidus&gt;p&lt;gt&gt;&lt;lf&gt;&lt;lf&gt;$(URL)&lt;solidus&gt;fmejobsubmitter&lt;solidus&gt;$(repository_name)&lt;solidus&gt;subscription_delete.fmw?opt_servicemode=async&lt;amp&gt;subscriber_id=&lt;at&gt;Value&lt;openparen&gt;request_id&lt;closeparen&gt;&lt;amp&gt;email_address=&lt;at&gt;Value&lt;openparen&gt;email&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="email_attachment_paths" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="61"
+#! TYPE="AttributeExposer"
+#! VERSION="0"
+#! POSITION="275 -707"
+#! ORDER="60"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_attachment{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_received" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_sent" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeExposer_2"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="email_publisher_attachment{},email_publisher_to,email_publisher_received,email_publisher_subject,email_publisher_from,email_publisher_sent"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="45"
+#! TYPE="StringSearcher"
+#! VERSION="0"
+#! POSITION="913 -493"
+#! ORDER="32"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="MATCHED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_attachment{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_received" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_sent" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="NOT_MATCHED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_attachment{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_to" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_received" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_subject" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_from" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_sent" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="REGEXP" PARM_VALUE="&lt;lt&gt;REQUEST_ID:.*&lt;gt&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringSearcher"/>
+#! <XFORM_PARM PARM_NAME="CASE" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ATTRIBUTE" PARM_VALUE="email_publisher_subject"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="46"
+#! TYPE="SubstringExtractor"
+#! VERSION="0"
+#! POSITION="926 -788"
+#! ORDER="33"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_attachment{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_received" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_sent" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="RESULT_ATTR" PARM_VALUE="request_id"/>
+#! <XFORM_PARM PARM_NAME="SRC_ATTR" PARM_VALUE="_matched_characters"/>
+#! <XFORM_PARM PARM_NAME="START" PARM_VALUE="12"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SubstringExtractor"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="END" PARM_VALUE="-2"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="71"
+#! TYPE="InlineQuerier"
+#! VERSION="1"
+#! POSITION="860 -1127"
+#! ORDER="36"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="Matched"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="request_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_attachment{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_received" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="email_publisher_sent" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="geom" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="enddate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="request_time" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="startdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="wkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="query_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="QUERY_SCHEMA" PARM_VALUE="Matched,request_id&lt;comma&gt;varchar&lt;openparen&gt;30&lt;closeparen&gt;&lt;comma&gt;email_publisher_from&lt;comma&gt;varchar&lt;openparen&gt;30&lt;closeparen&gt;&lt;comma&gt;subscription_confirmation.fme_feature_content&lt;comma&gt;fme_feature_content&lt;comma&gt;email&lt;comma&gt;varchar&lt;openparen&gt;30&lt;closeparen&gt;&lt;comma&gt;subscription_request.fme_feature_content&lt;comma&gt;fme_feature_content"/>
+#! <XFORM_PARM PARM_NAME="TABLE_DEF" PARM_VALUE="subscription_confirmation,request_id&lt;comma&gt;varchar&lt;openparen&gt;30&lt;closeparen&gt;&lt;comma&gt;email_publisher_from&lt;comma&gt;varchar&lt;openparen&gt;30&lt;closeparen&gt;,subscription_request,request_id&lt;comma&gt;varchar&lt;openparen&gt;30&lt;closeparen&gt;&lt;comma&gt;email&lt;comma&gt;varchar&lt;openparen&gt;30&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="QUERY_DEF" PARM_VALUE="Matched,SELECT&lt;space&gt;*&lt;space&gt;&lt;lf&gt;FROM&lt;space&gt;subscription_confirmation&lt;comma&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;subscription_request&lt;space&gt;&lt;lf&gt;WHERE&lt;space&gt;&lt;space&gt;&lt;space&gt;subscription_request.email&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;=&lt;space&gt;&lt;space&gt;subscription_confirmation.email_publisher_from&lt;space&gt;AND&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;subscription_request.request_id&lt;space&gt;=&lt;space&gt;&lt;space&gt;subscription_confirmation.request_id,FIRST"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="InlineQuerier_2"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="3"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="49"
+#! SOURCE_NODE="38"
+#! TARGET_NODE="42"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="56"
+#! SOURCE_NODE="42"
+#! TARGET_NODE="55"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="50"
+#! SOURCE_NODE="55"
+#! TARGET_NODE="41"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="57"
+#! SOURCE_NODE="55"
+#! TARGET_NODE="37"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="75"
+#! SOURCE_NODE="55"
+#! TARGET_NODE="74"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="76"
+#! SOURCE_NODE="55"
+#! TARGET_NODE="74"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="78"
+#! SOURCE_NODE="55"
+#! TARGET_NODE="74"
+#! SOURCE_PORT_DESC="fo 2"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="80"
+#! SOURCE_NODE="34"
+#! TARGET_NODE="79"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="63"
+#! SOURCE_NODE="79"
+#! TARGET_NODE="38"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="67"
+#! SOURCE_NODE="42"
+#! TARGET_NODE="66"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="68"
+#! SOURCE_NODE="66"
+#! TARGET_NODE="59"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="62"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="61"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="48"
+#! SOURCE_NODE="61"
+#! TARGET_NODE="45"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="69"
+#! SOURCE_NODE="45"
+#! TARGET_NODE="46"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="81"
+#! SOURCE_NODE="71"
+#! TARGET_NODE="34"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="70"
+#! SOURCE_NODE="64"
+#! TARGET_NODE="71"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="73"
+#! SOURCE_NODE="46"
+#! TARGET_NODE="71"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! <SUBDOCUMENT
+#! NAME="FMEServerEmailGenerator"
+#! FME_DOCUMENT_PRIORGUID=""
+#! IS_VISIBLE="false"
+#! DOC_TOP_LEFT="38 -869"
+#! VIEW_POSITION="0 0"
+#! DOC_EXTENTS="3985 803"
+#! GUID="411718c1-7b1a-4e88-8025-b4ff8df36d1a"
+#! SUPPRESS_UPGRADE="false"
+#! XFORM_DEPRECATED="No"
+#! ZOOM_SCALE="100"
+#! FME_DOCUMENT_GUID="411718c1-7b1a-4e88-8025-b4ff8df36d1a"
+#! FME_PROCESS_COUNT="NO_PARALLELISM"
+#! CATEGORY="FME Server"
+#! REQUIREMENTS_KEYWORD="none"
+#! FME_PROCESS_GROUPS_ORDERED="No"
+#! LEGAL_TERMS_CONDITIONS="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Copyright (c) 2012 Safe Software Inc.&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Permission is granted to anyone, free of charge, to use, modify and distribute the object code form of this template for any purpose, subject to the following restrictions:&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1) The origin of this template and associated FME(R) software must not be misrepresented.&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2) This template may only be used in conjunction with a validly licensed copy of FME software.&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;THIS SOFTWARE IS PROVIDED BY SAFE SOFTWARE INC. &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, NONINFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL SAFE SOFTWARE INC. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;"
+#! FME_PROCESS_GROUP_BY=""
+#! DESCRIPTION="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This transformer provides an easy method for creating an email message to be sent by the FME Server Notification Service. &lt;/p&gt;&#10;"
+#! TITLE="FMEServerEmailGenerator"
+#! USAGE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline;&quot;&gt;1. Create Topic and Email Subscriber&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; text-decoration: underline;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;In the FME Server Web Interface, create a topic for notifications to be sent to and also create a email subscriber that subscribes to this topic.&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline;&quot;&gt;2. Create a Workspace &lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Once you file out the the email fields in the transformer you can send the email message in two different ways:&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline;&quot;&gt;A. Send an email when the workspace completes&lt;/span&gt;&lt;/p&gt;&#10;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-size:8pt; text-decoration: underline;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; text-decoration:none;&quot;&gt;add a text file writer to the workspace&lt;/span&gt;&lt;/li&gt;&#10;&lt;li style=&quot; font-size:8pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;connect this transformer to the text file writer&apos;s feature type&lt;/li&gt;&#10;&lt;li style=&quot; font-size:8pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;publish the workspace&lt;/li&gt;&#10;&lt;li style=&quot; font-size:8pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;register it with the Job Submitter, Data Download and/or Notification Service&lt;/li&gt;&#10;&lt;li style=&quot; font-size:8pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;for each service, click the edit button&lt;/li&gt;&#10;&lt;li style=&quot; font-size:8pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;for Topics to Publish (Success), select the topic you created earlier&lt;/li&gt;&#10;&lt;li style=&quot; font-size:8pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;for Notification Writer, select the text file writer you added eariler&lt;/li&gt;&#10;&lt;li style=&quot; font-size:8pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;finish publishing the workspace&lt;/li&gt;&#10;&lt;li style=&quot; font-size:8pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;now the workspace will send an email whenever it is run through the FME Server Service you registered it with.&lt;/li&gt;&lt;/ul&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline;&quot;&gt;B. Send an email using a transformer&lt;/span&gt;&lt;/p&gt;&#10;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-size:8pt; text-decoration: underline;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; text-decoration:none;&quot;&gt;add a FMEServerNotifier transformer to your workflow&lt;/span&gt;&lt;/li&gt;&#10;&lt;li style=&quot; font-size:8pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;configure it to publish to the topic that you created earlier&lt;/li&gt;&#10;&lt;li style=&quot; font-size:8pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;for Content, select the text_line_data attribute&lt;/li&gt;&#10;&lt;li style=&quot; font-size:8pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;now the workspace will send an email whenever it is run.&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;"
+#! DOC_DYNAMIC_INPUT_ATTRS="0"
+#! HISTORY="21-03-2013,Aaron&lt;space&gt;Koning,Created"
+#! REQUIREMENTS="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;FME Server 2013&lt;/p&gt;&#10;"
+#! >
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT_EDIT_OR_NUM_OR_ATTR email_to To:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL TEXT_EDIT_OR_NUM_OR_ATTR email_cc CC:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR email_from From:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL TEXT_EDIT_OR_NUM_OR_ATTR email_replyto Reply to:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT_EDIT_OR_NUM_OR_ATTR email_subject Subject:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT_EDIT_OR_NUM_OR_ATTR email_subscriber_content Message:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL TEXT_EDIT_OR_NUM_OR_ATTR email_attachment_paths Attachments (comma separated):"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#! IDENTIFIER="27"
+#! NAME="Add the attachments"
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
+#! TOP_LEFT="768 -694"
+#! BOTTOM_RIGHT="3974 -1194"
+#! STICKY="true"
+#! COLOUR="0.192157,0.0784314,0.427451"
+#! CONTENTS="8 17 20 7 9 5 18 4 16 19 6 "
+#! />
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="1"
+#! TYPE="JSONTemplater"
+#! VERSION="0"
+#! POSITION="2299 -274"
+#! ORDER="16"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_replyto" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_paths" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_cc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subscriber_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="RESULT_ATTRIBUTE" PARM_VALUE="text_line_data"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONTemplater"/>
+#! <XFORM_PARM PARM_NAME="CONSECUTIVE_GROUPS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="ROOT_QUERY_FILE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ROOT_QUERY_EXPR" PARM_VALUE="&lt;opencurly&gt;&lt;lf&gt;&lt;quote&gt;email_to&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;_email_to&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;quote&gt;email_cc&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;_email_cc&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;quote&gt;email_from&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;_email_from&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;quote&gt;email_replyto&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;_email_replyto&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;quote&gt;email_subject&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;_email_subject&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;quote&gt;subscriber_content&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;_email_subscriber_content&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;closecurly&gt;"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="VISIBLE_QUERY_VALIDATE" PARM_VALUE="Yes"/>
+#! <XFORM_PARM PARM_NAME="SUB_TEMPLATE_PARAMS" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="2"
+#! TYPE="AttributeCreator"
+#! VERSION="3"
+#! POSITION="1748 -277"
+#! ORDER="15"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_replyto" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_paths" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_cc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subscriber_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="0"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="Use Empty String"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="0"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="_email_to,$(email_to),_email_subject,$(email_subject),_email_subscriber_content,$(email_subscriber_content)"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="3"
+#! TYPE="ParameterFetcher"
+#! VERSION="4"
+#! POSITION="1212 -282"
+#! ORDER="14"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_replyto" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_paths" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_cc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ParameterFetcher"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="_email_from {$(email_from)} _email_replyto {$(email_replyto)} _email_attachment_paths {$(email_attachment_paths)} _email_cc {$(email_cc)}"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="4"
+#! TYPE="AttributeSplitter"
+#! VERSION="2"
+#! POSITION="817 -835"
+#! ORDER="22"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_replyto" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_paths" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_cc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subscriber_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_path_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="_email_attachment_path_list"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeSplitter"/>
+#! <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="_email_attachment_paths"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="DELIMITER" PARM_VALUE="&lt;comma&gt;"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRIM_OPTION" PARM_VALUE="Both"/>
+#! <XFORM_PARM PARM_NAME="DROP_EMPTY_PARTS" PARM_VALUE="No"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="5"
+#! TYPE="ListExploder"
+#! VERSION="2"
+#! POSITION="1288 -839"
+#! ORDER="17"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="LIST_FOUND"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_replyto" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_paths" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_cc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subscriber_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_path_list" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_element_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="NOT_FOUND"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_from" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_replyto" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_paths" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_cc" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_to" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_subject" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_subscriber_content" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ListExploder"/>
+#! <XFORM_PARM PARM_NAME="INDEX_ATTR" PARM_VALUE="_element_index"/>
+#! <XFORM_PARM PARM_NAME="MODE" PARM_VALUE="List Elements and Original Attributes"/>
+#! <XFORM_PARM PARM_NAME="LIST_ATTR" PARM_VALUE="_email_attachment_path_list{}"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="6"
+#! TYPE="StringConcatenator"
+#! VERSION="6"
+#! POSITION="1753 -869"
+#! ORDER="18"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_replyto" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_paths" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_cc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subscriber_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_path_list" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_element_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_json" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PARM_LINE" PARM_VALUE="&lt;quote&gt;email_attachment&lt;opencurly&gt;&lt;at&gt;Value&lt;openparen&gt;_element_index&lt;closeparen&gt;&lt;closecurly&gt;&lt;quote&gt;:&lt;space&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;_email_attachment_path_list&lt;closeparen&gt;&lt;quote&gt;"/>
+#! <XFORM_PARM PARM_NAME="VAL_ATTR" PARM_VALUE="_email_attachment_json"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringConcatenator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="7"
+#! TYPE="Aggregator"
+#! VERSION="10"
+#! POSITION="2275 -869"
+#! ORDER="19"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="AGGREGATE"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_replyto" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_paths" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_cc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subscriber_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_path_list" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_element_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_json" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="_email_feature_id"/>
+#! <XFORM_PARM PARM_NAME="MODE" PARM_VALUE="Assemble One Level"/>
+#! <XFORM_PARM PARM_NAME="PARENT_ID_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ASSEMBLE_HIERARCHY_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ACCUM_ATTRS_NAME" PARM_VALUE="Yes"/>
+#! <XFORM_PARM PARM_NAME="GEOM_NAME_FIELD" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="CHILD_ID_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SEP" PARM_VALUE="&lt;comma&gt;"/>
+#! <XFORM_PARM PARM_NAME="SUM" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="AGGREGATE_TYPE" PARM_VALUE="Homogeneous Collection (If Possible)"/>
+#! <XFORM_PARM PARM_NAME="ATTR_TO_TRAIT" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Aggregator"/>
+#! <XFORM_PARM PARM_NAME="PRESERVE_ID" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="AV" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ATTR_ACCUM_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="WEIGHT" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="CONCAT_ATTRS" PARM_VALUE="_email_attachment_json"/>
+#! <XFORM_PARM PARM_NAME="ID_SELECTION" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ID_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ASSEMBLE_ONE_LEVEL_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ORDERED" PARM_VALUE="No"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="8"
+#! TYPE="StringReplacer"
+#! VERSION="3"
+#! POSITION="3378 -869"
+#! ORDER="20"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_replyto" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_paths" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_cc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subscriber_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_path_list" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_element_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_json" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="SRC_ATTRS" PARM_VALUE="text_line_data"/>
+#! <XFORM_PARM PARM_NAME="REGEXP" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringReplacer"/>
+#! <XFORM_PARM PARM_NAME="CASE" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="NO_MATCH_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="REPLACE_TEXT" PARM_VALUE="&lt;comma&gt;&lt;lf&gt;&lt;at&gt;Value&lt;openparen&gt;_email_attachment_json&lt;closeparen&gt;&lt;lf&gt;&lt;closecurly&gt;"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="NO_MATCH" PARM_VALUE="_FME_NO_OP_"/>
+#! <XFORM_PARM PARM_NAME="FIND_TEXT" PARM_VALUE="&lt;closecurly&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="9"
+#! TYPE="StringReplacer"
+#! VERSION="3"
+#! POSITION="2838 -869"
+#! ORDER="21"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_replyto" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_paths" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_cc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subscriber_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_path_list" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_element_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_json" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="SRC_ATTRS" PARM_VALUE="_email_attachment_json"/>
+#! <XFORM_PARM PARM_NAME="REGEXP" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringReplacer_2"/>
+#! <XFORM_PARM PARM_NAME="CASE" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="NO_MATCH_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="REPLACE_TEXT" PARM_VALUE="&lt;backslash&gt;&lt;backslash&gt;"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="NO_MATCH" PARM_VALUE="_FME_NO_OP_"/>
+#! <XFORM_PARM PARM_NAME="FIND_TEXT" PARM_VALUE="&lt;backslash&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="10"
+#! TYPE="Tester"
+#! VERSION="2"
+#! POSITION="2833 -284"
+#! ORDER="23"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="PASSED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_from" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_replyto" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_paths" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_cc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_to" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_email_subscriber_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="FAILED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_from" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_replyto" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_attachment_paths" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_cc" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_to" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_subject" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_email_subscriber_content" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="Automatic"/>
+#! <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="&quot;&quot;"/>
+#! <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="OR"/>
+#! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Tester"/>
+#! <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST _email_attachment_paths ATTRIBUTE_IS_EMPTY &lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="11"
+#! TYPE="Counter"
+#! VERSION="2"
+#! POSITION="663 -278"
+#! ORDER="24"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_email_feature_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="SCOPE" PARM_VALUE="Local"/>
+#! <XFORM_PARM PARM_NAME="START" PARM_VALUE="0"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Counter"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="DOMAIN" PARM_VALUE="counter"/>
+#! <XFORM_PARM PARM_NAME="CNT_ATTR" PARM_VALUE="_email_feature_id"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <SUBDOCUMENT_IOS>
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="12"
+#! NAME="OUTPUT"
+#! POSITION="4023 -292"
+#! COLLAPSED="false"
+#! IS_SOURCE="false"
+#! ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="13"
+#! NAME="INPUT"
+#! POSITION="38 -66"
+#! COLLAPSED="false"
+#! PUBLISHED="true"
+#! IS_SOURCE="true"
+#! ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! </SUBDOCUMENT_IOS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="14"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="1"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="15"
+#! SOURCE_NODE="3"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="16"
+#! SOURCE_NODE="5"
+#! TARGET_NODE="6"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="17"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="7"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="18"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="9"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="19"
+#! SOURCE_NODE="9"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="20"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="5"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="21"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="22"
+#! SOURCE_NODE="10"
+#! TARGET_NODE="12"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="23"
+#! SOURCE_NODE="10"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="24"
+#! SOURCE_NODE="8"
+#! TARGET_NODE="12"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="25"
+#! SOURCE_NODE="13"
+#! TARGET_NODE="11"
+#! SOURCE_PORT_DESC="0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="26"
+#! SOURCE_NODE="11"
+#! TARGET_NODE="3"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! </SUBDOCUMENT>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_TEXTLINE_1,TEXTLINE_IN_READ_WHOLE_FILE_AT_ONCE_TEXTLINE_1,TEXTLINE_IN_READ_BOTTOM_UP_TEXTLINE_1,TEXTLINE_IN_SKIP_LINES_TEXTLINE_1,TEXTLINE_IN_SKIP_FOOTER_TEXTLINE_1,TEXTLINE_IN_ENCODING_TEXTLINE_1,GOOGLEFUSIONTABLES_DB_IN_REFRESH_TOKEN_GOOGLEFUSIONTABLES_DB_1,GOOGLEFUSIONTABLES_DB_IN_WHERE_CLAUSE_GOOGLEFUSIONTABLES_DB_1,GOOGLEFUSIONTABLES_DB_IN_EXPOSE_ATTRS_GROUP_GOOGLEFUSIONTABLES_DB_1,GOOGLEFUSIONTABLES_DB_IN_BEGIN_SQL_GOOGLEFUSIONTABLES_DB_1,GOOGLEFUSIONTABLES_DB_IN_END_SQL_GOOGLEFUSIONTABLES_DB_1,GOOGLEFUSIONTABLES_OUT_REFRESH_TOKEN_GOOGLEFUSIONTABLES_1,GOOGLEFUSIONTABLES_OUT_WRITER_MODE_GOOGLEFUSIONTABLES_1,GOOGLEFUSIONTABLES_OUT_TRANSACTION_INTERVAL_GOOGLEFUSIONTABLES_1,GOOGLEFUSIONTABLES_OUT_BEGIN_SQL_GOOGLEFUSIONTABLES_1,GOOGLEFUSIONTABLES_OUT_END_SQL_GOOGLEFUSIONTABLES_1
+DEFAULT_MACRO SourceDataset_TEXTLINE Z:\DonStuff\DemoData\2013Demos\AlertReportingSystem\2ndIteration\data\subscriber_data\subscribe_confirm_email.txt
+GUI MULTIFILE SourceDataset_TEXTLINE Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*.*)|*.* Source Text File(s):
+DEFAULT_MACRO SERVER_URL_HTML http://demos.fmeserver.com/subscribe-notify-report/
+GUI IGNORE TEXT SERVER_URL_HTML SERVER_URL_HTML:
+DEFAULT_MACRO URL https://fmepedia2014-safe-software.fmecloud.com
+GUI IGNORE STRING URL Web Connection URL:
+DEFAULT_MACRO repository_name Subscribe%20Report%20Notify
+GUI IGNORE TEXT repository_name Repository Name:
+DEFAULT_MACRO HTTP_AUTH_PASSWORD fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszKWJ1S+BbjrB5iZzf1lBZpAeRq1ZJhSDUgzkgrPIC7GlglTH4FcrtLlB0XQ/1PmDCfBdRhEsXkVzrsL99qdNbnhFG5TXyjupUUPCb9ncwjYTVkUadgGCWhaVLyIPU2cN+C1d6P3zQC5UOtMELcnf4MSA23Ga99MCjQrEK0P2/Zp2qFds5R61B2WicosiJLzOCQlu7MTROVODfRVujkfoUJk1wQ87zsqH34TrlUqNKbX0I2gS2D890qxCDJ7XKsvWm5+xFfYxyPYAfBhg8NOPSGraR5NPOADYZIzRSWY7DZab3wm885B99/OL9+UKITrD0VE6qwvCObEe+UEB7Z+PLo2zTjS6wD1sV)
+GUI IGNORE PASSWORD HTTP_AUTH_PASSWORD HTTP_AUTH_PASSWORD:
+DEFAULT_MACRO HTTP_AUTH_USERNAME fmepediademos
+GUI IGNORE TEXT HTTP_AUTH_USERNAME HTTP_AUTH_USERNAMEHTTP_AUTH_USERNAME:
+INCLUDE [ if {{$(SourceDataset_TEXTLINE)} == {}} { puts_real {Parameter 'SourceDataset_TEXTLINE' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SERVER_URL_HTML)} == {}} { puts_real {Parameter 'SERVER_URL_HTML' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(URL)} == {}} { puts_real {Parameter 'URL' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(repository_name)} == {}} { puts_real {Parameter 'repository_name' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(HTTP_AUTH_PASSWORD)} == {}} { puts_real {Parameter 'HTTP_AUTH_PASSWORD' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(HTTP_AUTH_USERNAME)} == {}} { puts_real {Parameter 'HTTP_AUTH_USERNAME' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} TEXTLINE
+MULTI_READER_KEYWORD{0} TEXTLINE_1
+MULTI_READER_GEN_DIRECTIVES{0} READ_WHOLE_FILE_AT_ONCE,YES,READ_BOTTOM_UP,NO,SKIP_LINES,0,SKIP_FOOTER,0,ENCODING,utf-8,SourceDataset,C:<backslash>TEMP<backslash>mailet<backslash>mailet_notification.json,FME_GEOMETRY_HANDLING,Enhanced
+MULTI_READER_TYPE{1} GOOGLEFUSIONTABLES_DB
+MULTI_READER_KEYWORD{1} GOOGLEFUSIONTABLES_DB_1
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} GOOGLEFUSIONTABLES
+MULTI_WRITER_KEYWORD{0} GOOGLEFUSIONTABLES_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "TEXTLINE_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER TEXTLINE TEXTLINE_1
+# =====================================================================
+# The following GUI line prompts for a file to be used as the source
+# TextLine file. The user input is stored in a macro, which is then
+# used to define the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_TEXTLINE_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER TEXTLINE TEXTLINE_1
+DEFAULT_MACRO SourceDataset_TEXTLINE_1 $(SourceDataset_TEXTLINE)
+GUI MULTIFILE SourceDataset_TEXTLINE_1 Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*.*)|*.* Source Text File(s):
+DEFAULT_MACRO TEXTLINE_IN_READ_WHOLE_FILE_AT_ONCE_TEXTLINE_1 YES
+TEXTLINE_1_READ_WHOLE_FILE_AT_ONCE "$(TEXTLINE_IN_READ_WHOLE_FILE_AT_ONCE_TEXTLINE_1)"
+GUI ACTIVECHOICE TEXTLINE_IN_READ_WHOLE_FILE_AT_ONCE_TEXTLINE_1 YES,TEXTLINE_IN_READ_BOTTOM_UP,TEXTLINE_IN_SKIP_LINES,TEXTLINE_IN_SKIP_FOOTER%NO Read Whole File at Once:
+DEFAULT_MACRO TEXTLINE_IN_READ_BOTTOM_UP_TEXTLINE_1 NO
+TEXTLINE_1_READ_BOTTOM_UP "$(TEXTLINE_IN_READ_BOTTOM_UP_TEXTLINE_1)"
+GUI CHOICE TEXTLINE_IN_READ_BOTTOM_UP_TEXTLINE_1 Yes%No Read Bottom Up:
+DEFAULT_MACRO TEXTLINE_IN_SKIP_LINES_TEXTLINE_1 0
+TEXTLINE_1_SKIP_LINES "$(TEXTLINE_IN_SKIP_LINES_TEXTLINE_1)"
+GUI OPTIONAL INTEGER TEXTLINE_IN_SKIP_LINES_TEXTLINE_1 Number of Lines to Skip:
+DEFAULT_MACRO TEXTLINE_IN_SKIP_FOOTER_TEXTLINE_1 0
+TEXTLINE_1_SKIP_FOOTER "$(TEXTLINE_IN_SKIP_FOOTER_TEXTLINE_1)"
+GUI OPTIONAL INTEGER TEXTLINE_IN_SKIP_FOOTER_TEXTLINE_1 Number of Footer Lines to Skip:
+# =====================================================================
+# Allows to force the encoding of source text file
+DEFAULT_MACRO TEXTLINE_IN_ENCODING_TEXTLINE_1 
+TEXTLINE_1_ENCODING "$(TEXTLINE_IN_ENCODING_TEXTLINE_1)"
+GUI OPTIONAL STRING_OR_ENCODING TEXTLINE_IN_ENCODING_TEXTLINE_1 UTF-8%UTF-16LE%UTF-16BE%ANSI%BIG5%SJIS%CP437%CP708%CP720%CP737%CP775%CP850%CP852%CP855%CP857%CP860%CP861%CP862%CP863%CP864%CP865%CP866%CP869%CP932%CP936%CP950%CP1250%CP1251%CP1252%CP1253%CP1254%CP1255%CP1256%CP1257%CP1258%ISO8859-1%ISO8859-2%ISO8859-3%ISO8859-4%ISO8859-5%ISO8859-6%ISO8859-7%ISO8859-8%ISO8859-9%ISO8859-13%ISO8859-15 Character Encoding (optional):
+TEXTLINE_1_DATASET "$(SourceDataset_TEXTLINE_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GOOGLEFUSIONTABLES_DB_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GOOGLEFUSIONTABLES_DB GOOGLEFUSIONTABLES_DB_1
+# ============================================================================
+# Just fake out a macro; it's not used
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_GOOGLEFUSIONTABLES_DB_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GOOGLEFUSIONTABLES_DB GOOGLEFUSIONTABLES_DB_1
+DEFAULT_MACRO SourceDataset_GOOGLEFUSIONTABLES_DB_1 NULL
+DEFAULT_MACRO GOOGLEFUSIONTABLES_DB_IN_REFRESH_TOKEN_GOOGLEFUSIONTABLES_DB_1 1/orR9TJpthHw8VWK8UrAuy3kBUJOMpK-KLCaUidUR7Ls
+GOOGLEFUSIONTABLES_DB_1_REFRESH_TOKEN "$(GOOGLEFUSIONTABLES_DB_IN_REFRESH_TOKEN_GOOGLEFUSIONTABLES_DB_1)"
+GUI OPTIONAL OAUTH GOOGLEFUSIONTABLES_DB_IN_REFRESH_TOKEN_GOOGLEFUSIONTABLES_DB_1 api_project,googlefusiontables,url,https:<solidus><solidus>accounts.google.com<solidus>o<solidus>oauth2<solidus>auth?response_type=code<amp>scope=https:<solidus><solidus>www.googleapis.com<solidus>auth<solidus>fusiontables<amp>redirect_uri=urn:ietf:wg:oauth:2.0:oob<amp>client_id=111883858131.apps.googleusercontent.com Refresh Token:
+DEFAULT_MACRO GOOGLEFUSIONTABLES_DB_IN_CLIENT_ID_GOOGLEFUSIONTABLES_DB_1 
+GOOGLEFUSIONTABLES_DB_1_CLIENT_ID "$(GOOGLEFUSIONTABLES_DB_IN_CLIENT_ID_GOOGLEFUSIONTABLES_DB_1)"
+DEFAULT_MACRO GOOGLEFUSIONTABLES_DB_IN_CLIENT_SECRET_GOOGLEFUSIONTABLES_DB_1 
+GOOGLEFUSIONTABLES_DB_1_CLIENT_SECRET "$(GOOGLEFUSIONTABLES_DB_IN_CLIENT_SECRET_GOOGLEFUSIONTABLES_DB_1)"
+DEFAULT_MACRO GOOGLEFUSIONTABLES_DB_IN_WHERE_CLAUSE_GOOGLEFUSIONTABLES_DB_1 
+GOOGLEFUSIONTABLES_DB_1_WHERE_CLAUSE "$(GOOGLEFUSIONTABLES_DB_IN_WHERE_CLAUSE_GOOGLEFUSIONTABLES_DB_1)"
+GUI OPTIONAL TEXT_EDIT_SQL GOOGLEFUSIONTABLES_DB_IN_WHERE_CLAUSE_GOOGLEFUSIONTABLES_DB_1 Where Clause:
+DEFAULT_MACRO GOOGLEFUSIONTABLES_DB_IN_EXPOSE_ATTRS_GROUP_GOOGLEFUSIONTABLES_DB_1 
+GOOGLEFUSIONTABLES_DB_1_EXPOSE_ATTRS_GROUP "$(GOOGLEFUSIONTABLES_DB_IN_EXPOSE_ATTRS_GROUP_GOOGLEFUSIONTABLES_DB_1)"
+GUI DISCLOSUREGROUP GOOGLEFUSIONTABLES_DB_IN_EXPOSE_ATTRS_GROUP_GOOGLEFUSIONTABLES_DB_1 GOOGLEFUSIONTABLES_DB_EXPOSE_FORMAT_ATTRS Schema Attributes
+DEFAULT_MACRO GOOGLEFUSIONTABLES_DB_IN_BEGIN_SQL_GOOGLEFUSIONTABLES_DB_1 
+GUI OPTIONAL TEXT_EDIT_SQL GOOGLEFUSIONTABLES_DB_IN_BEGIN_SQL_GOOGLEFUSIONTABLES_DB_1 SQL Statement to Execute Before Translation:
+GOOGLEFUSIONTABLES_DB_1_BEGIN_SQL{0} "$(GOOGLEFUSIONTABLES_DB_IN_BEGIN_SQL_GOOGLEFUSIONTABLES_DB_1)"
+DEFAULT_MACRO GOOGLEFUSIONTABLES_DB_IN_END_SQL_GOOGLEFUSIONTABLES_DB_1 
+GUI OPTIONAL TEXT_EDIT_SQL GOOGLEFUSIONTABLES_DB_IN_END_SQL_GOOGLEFUSIONTABLES_DB_1 SQL Statement to Execute After Translation:
+GOOGLEFUSIONTABLES_DB_1_END_SQL{0} "$(GOOGLEFUSIONTABLES_DB_IN_END_SQL_GOOGLEFUSIONTABLES_DB_1)"
+GOOGLEFUSIONTABLES_DB_1_DATASET "$(SourceDataset_GOOGLEFUSIONTABLES_DB_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GOOGLEFUSIONTABLES_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER GOOGLEFUSIONTABLES GOOGLEFUSIONTABLES_1
+# ============================================================================
+# Just fake out a macro; it's not used
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_GOOGLEFUSIONTABLES_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER GOOGLEFUSIONTABLES GOOGLEFUSIONTABLES_1
+DEFAULT_MACRO DestDataset_GOOGLEFUSIONTABLES_1 NULL
+DEFAULT_MACRO GOOGLEFUSIONTABLES_OUT_REFRESH_TOKEN_GOOGLEFUSIONTABLES_1 1/JqfMRbltEvLF34_IIt7d-z4tkWKYvIxEdMM5gHJB-Ms
+GOOGLEFUSIONTABLES_1_REFRESH_TOKEN "$(GOOGLEFUSIONTABLES_OUT_REFRESH_TOKEN_GOOGLEFUSIONTABLES_1)"
+GUI OAUTH GOOGLEFUSIONTABLES_OUT_REFRESH_TOKEN_GOOGLEFUSIONTABLES_1 api_project,googlefusiontables,url,https:<solidus><solidus>accounts.google.com<solidus>o<solidus>oauth2<solidus>auth?response_type=code<amp>scope=https:<solidus><solidus>www.googleapis.com<solidus>auth<solidus>fusiontables<amp>redirect_uri=urn:ietf:wg:oauth:2.0:oob<amp>client_id=111883858131.apps.googleusercontent.com Refresh Token:
+DEFAULT_MACRO GOOGLEFUSIONTABLES_OUT_CLIENT_ID_GOOGLEFUSIONTABLES_1 
+GOOGLEFUSIONTABLES_1_CLIENT_ID "$(GOOGLEFUSIONTABLES_OUT_CLIENT_ID_GOOGLEFUSIONTABLES_1)"
+DEFAULT_MACRO GOOGLEFUSIONTABLES_OUT_CLIENT_SECRET_GOOGLEFUSIONTABLES_1 
+GOOGLEFUSIONTABLES_1_CLIENT_SECRET "$(GOOGLEFUSIONTABLES_OUT_CLIENT_SECRET_GOOGLEFUSIONTABLES_1)"
+DEFAULT_MACRO GOOGLEFUSIONTABLES_OUT_WRITER_MODE_GOOGLEFUSIONTABLES_1 INSERT
+GUI CHOICE GOOGLEFUSIONTABLES_OUT_WRITER_MODE_GOOGLEFUSIONTABLES_1 INSERT%UPDATE%DELETE Writer Mode:
+GOOGLEFUSIONTABLES_1_WRITER_MODE $(GOOGLEFUSIONTABLES_OUT_WRITER_MODE_GOOGLEFUSIONTABLES_1)
+DEFAULT_MACRO GOOGLEFUSIONTABLES_OUT_TRANSACTION_INTERVAL_GOOGLEFUSIONTABLES_1 400
+GUI TEXT GOOGLEFUSIONTABLES_OUT_TRANSACTION_INTERVAL_GOOGLEFUSIONTABLES_1 Transaction Interval:
+GOOGLEFUSIONTABLES_1_TRANSACTION_INTERVAL $(GOOGLEFUSIONTABLES_OUT_TRANSACTION_INTERVAL_GOOGLEFUSIONTABLES_1)
+DEFAULT_MACRO GOOGLEFUSIONTABLES_OUT_BEGIN_SQL_GOOGLEFUSIONTABLES_1 
+GUI OPTIONAL TEXT_EDIT_SQL GOOGLEFUSIONTABLES_OUT_BEGIN_SQL_GOOGLEFUSIONTABLES_1 SQL Statement to Execute Before Translation:
+GOOGLEFUSIONTABLES_1_BEGIN_SQL{0} "$(GOOGLEFUSIONTABLES_OUT_BEGIN_SQL_GOOGLEFUSIONTABLES_1)"
+DEFAULT_MACRO GOOGLEFUSIONTABLES_OUT_END_SQL_GOOGLEFUSIONTABLES_1 
+GUI OPTIONAL TEXT_EDIT_SQL GOOGLEFUSIONTABLES_OUT_END_SQL_GOOGLEFUSIONTABLES_1 SQL Statement to Execute After Translation:
+GOOGLEFUSIONTABLES_1_END_SQL{0} "$(GOOGLEFUSIONTABLES_OUT_END_SQL_GOOGLEFUSIONTABLES_1)"
+GOOGLEFUSIONTABLES_1_DATASET "$(DestDataset_GOOGLEFUSIONTABLES_1)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)2_subscription_confirm_email.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Datum
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_TEXTLINE_1 TEXTLINE_1
+DEFAULT_MACRO DATASET_KEYWORD_GOOGLEFUSIONTABLES_DB_1 GOOGLEFUSIONTABLES_DB_1
+DEFAULT_MACRO DATASET_KEYWORD_GOOGLEFUSIONTABLES_1 GOOGLEFUSIONTABLES_1
+FME_PASSWORD_PARAMETER_LIST HTTP_AUTH_PASSWORD
+# -------------------------------------------------------------------------
+
+TEXTLINE_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+GOOGLEFUSIONTABLES_DB_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME 2_subscription_confirm_email
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+# -------------------------------------------------------------------------
+GOOGLEFUSIONTABLES_DB_1_DEF EMSSubscriptionRequest   googlefusiontables_type      googlefusiontables_no_geom   googlefusiontables_sql_where_clause ""   googlefusiontables_sql_statement ""   geom                         location   email                        text   enddate                      text   request_id                   text   request_time                 text   startdate                    text   wkt                          text   query_type                   text
+
+# -------------------------------------------------------------------------
+
+Lookup ___KnownFeatureTypes___   "$(DATASET_KEYWORD_TEXTLINE_1)_text_line" yes   "$(DATASET_KEYWORD_GOOGLEFUSIONTABLES_DB_1)_EMSSubscriptionRequest" yes   "" no
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Unexpected Input Remover"   INPUT FEATURE_TYPE *   TEST @Lookup(___KnownFeatureTypes___,@Concatenate(&multi_reader_keyword,"_",@FeatureType())) == yes   OUTPUT PASSED FEATURE_TYPE *
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Source -> Generic"    INPUT FEATURE_TYPE *    OUTPUT FEATURE_TYPE *       @Transform(&multi_reader_type,FME_GENERIC,ALIAS_GEOMETRY)
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * JSONQueryFactory    FACTORY_NAME JSONFlattener    INPUT  FEATURE_TYPE text_line    MODE FLATTEN    JSON_ATTR text_line_data    EXPLODE_QUERY "json"    RECURSIVE_FLATTEN YES    OUTPUT EXPLODED FEATURE_TYPE JSONFlattener_OUTPUT
+
+# -------------------------------------------------------------------------
+
+# Expose all attributes.  This ensures that if you expose fme_dataset, you will get it.
+
+READER_META_ATTRIBUTES fme_feature_type fme_dataset fme_basename
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeExposer_2    INPUT  FEATURE_TYPE JSONFlattener_OUTPUT    OUTPUT FEATURE_TYPE AttributeExposer_2_OUTPUT
+
+# -------------------------------------------------------------------------
+
+MACRO casemac
+INCLUDE [ if { {no} == {no} } { puts {MACRO casemac -nocase}} ]
+Tcl2 proc StringSearcher_44d60c70_0947_11e4_9fb5_bca0d036bcdf0_doGrep { regExp } {   set results [regexp -inline $(casemac) [FME_DecodeText $regExp]                  [FME_GetAttribute {"email_publisher_subject"}]];   set attrName {_matched_characters};   set index 0;   foreach part $results {       FME_SetAttribute $attrName $part;       set attrName "_matched_parts{$index}";       incr index;   };   if {$index > 0} {       FME_UnsetAttributes $attrName;   };   return $index; }
+FACTORY_DEF * TestFactory    FACTORY_NAME StringSearcher    INPUT  FEATURE_TYPE AttributeExposer_2_OUTPUT    TEST @Tcl2("StringSearcher_44d60c70_0947_11e4_9fb5_bca0d036bcdf0_doGrep {<lt>REQUEST_ID:.*<gt>} ") > 0    OUTPUT PASSED FEATURE_TYPE StringSearcher_MATCHED
+
+# -------------------------------------------------------------------------
+
+# Since the Tcl "END" index specification starts at -1 for the second
+# last character, and we've defined -1 to be the last charater, we've got
+# small bit of fiddling to do
+
+Tcl2 proc SubstringExtractor_fixLastIndex {lastValue} {     if {$lastValue < -1} {         incr lastValue;         return "end$lastValue";     }     elseif {$lastValue == -1} {         return "end";     }     else {         return $lastValue;     } }
+Tcl2 proc SubstringExtractor_extract {startIdx endIdx} {     FME_SetAttribute {"request_id"}         [string range [FME_GetAttribute {"_matched_characters"}]                       [SubstringExtractor_fixLastIndex $startIdx]                       [SubstringExtractor_fixLastIndex $endIdx]]     }
+FACTORY_DEF * TeeFactory    FACTORY_NAME SubstringExtractor    INPUT  FEATURE_TYPE StringSearcher_MATCHED    OUTPUT FEATURE_TYPE SubstringExtractor_OUTPUT         @Tcl2("SubstringExtractor_extract 12 -2")
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * InlineQueryFactory FACTORY_NAME InlineQuerier_2 TABLE_DEF subscription_confirmation request_id<comma>varchar<openparen>30<closeparen><comma>email_publisher_from<comma>varchar<openparen>30<closeparen> TABLE_DEF subscription_request request_id<comma>varchar<openparen>30<closeparen><comma>email<comma>varchar<openparen>30<closeparen> QUERY_DEF Matched SQL_ENCODED SELECT<space>*<space><lf>FROM<space>subscription_confirmation<comma><space><lf><space><space><space><space><space>subscription_request<space><lf>WHERE<space><space><space>subscription_request.email<space><space><space><space><space><space>=<space><space>subscription_confirmation.email_publisher_from<space>AND<lf><space><space><space><space><space><space><space><space>subscription_request.request_id<space>=<space><space>subscription_confirmation.request_id GEOMETRY_SELECTION FIRST INPUT subscription_confirmation FEATURE_TYPE SubstringExtractor_OUTPUT INPUT subscription_request FEATURE_TYPE EMSSubscriptionRequest OUTPUT Matched FEATURE_TYPE InlineQuerier_2_Matched
+# -------------------------------------------------------------------------
+
+# First determine which function we are going to be using -- we can do
+# this statically at parse time for efficiency sake
+
+MACRO GeometryReplacer_Function
+INCLUDE [ if {{wkt} == {fmebinary} } {               puts {MACRO GeometryReplacer_Function @Geometry(FROM_ATTRIBUTE_BINARY,wkt) }           } elseif {{wkt} == {fmehex} } {               puts {MACRO GeometryReplacer_Function @Geometry(FROM_ATTRIBUTE_BINARY_HEX,wkt) }           } elseif {{wkt} == {fmexml} } {               puts {MACRO GeometryReplacer_Function @Geometry(FROM_ATTRIBUTE,wkt) }           } elseif {{wkt} == {fmexmlencoded} } {               puts {MACRO GeometryReplacer_Function @Geometry(FROM_ENCODED_STRING,&wkt) }           } elseif {{wkt} == {wkt} ||                      {wkt} == {wkb} ||                      {wkt} == {wkbhex} } {               puts {MACRO GeometryReplacer_Function @OGCGeometry(from_attribute,wkt,wkt) }           } elseif {{wkt} == {GEOJSON} ||                     {wkt} == {ESRIJSON} } {               puts {MACRO GeometryReplacer_Function @JSONGeometry(FROM_ATTRIBUTE,wkt,wkt) }           } elseif {{wkt} == {GEORSS} } {               puts {MACRO GeometryReplacer_Function @GeoRSSGeometry(FROM_ATTRIBUTE,wkt) }           } elseif {{wkt} == {KML} } {               puts {MACRO GeometryReplacer_Function @KMLGeometry(FROM_ATTRIBUTE,wkt) }           } elseif {{wkt} == {GML} } {               puts {MACRO GeometryReplacer_Function @GMLGeometry(FROM_ATTRIBUTE,wkt,<Unused>) }           } elseif {{wkt} == {geohash} } {               puts {MACRO GeometryReplacer_Function @GeoHash(FROM_ATTRIBUTE,wkt) }           }         ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME GeometryReplacer    INPUT  FEATURE_TYPE InlineQuerier_2_Matched    OUTPUT FEATURE_TYPE GeometryReplacer_OUTPUT         $(GeometryReplacer_Function)
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME CoordinateSystemSetter    INPUT  FEATURE_TYPE GeometryReplacer_OUTPUT    OUTPUT FEATURE_TYPE CoordinateSystemSetter_OUTPUT         @CoordSys("LL84")
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc TimeStamper_formatGetter { inVal } {    if { [string compare $inVal {FME Date/Time (^Y^m^d^H^M^S)}] == 0 } {       return {^Y^m^d^H^M^S};    } elseif { [string compare $inVal {FME Date (^Y^m^d)}] == 0} {       return {^Y^m^d};    } elseif { [string compare $inVal {FME Time (^H^M^S)}] == 0} {       return {^H^M^S};    } elseif { [string compare $inVal {XML Date (^Y-^m-^d)}] == 0} {       return {^Y-^m-^d};    } elseif { [string compare $inVal {XML DateTime (^Y-^m-^dT^H:^M:^S)}] == 0} {       return {^Y-^m-^dT^H:^M:^S};    } elseif { [string compare $inVal {XML Time (^H:^M:^S)}] == 0} {       return {^H:^M:^S};    } elseif { [string compare $inVal {Locale Date (^c)}] == 0} {       return {^c};    };    return $inVal; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME TimeStamper    INPUT  FEATURE_TYPE CoordinateSystemSetter_OUTPUT    OUTPUT FEATURE_TYPE TimeStamper_OUTPUT         @SupplyAttributes(ENCODED, current_date, @Timestamp(@Tcl2("TimeStamper_formatGetter {FME Date (^Y^m^d)} ")))
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc DateFormatter_formatter {} {     catch {       set dateFormat {FME Date (%Y%m%d)};       if { [string compare $dateFormat {FME Date/Time (%Y%m%d%H%M%S)}] == 0 } {          set dateFormat {%Y%m%d%H%M%S};       } elseif { [string compare $dateFormat {FME Date (%Y%m%d)}] == 0} {          set dateFormat {%Y%m%d};       } elseif { [string compare $dateFormat {FME Time (%H%M%S)}] == 0} {          set dateFormat {%H%M%S};       } elseif { [string compare $dateFormat {XML Date (%Y-%m-%d)}] == 0} {          set dateFormat {%Y-%m-%d};       } elseif { [string compare $dateFormat {XML DateTime (%Y-%m-%dT%H:%M:%S)}] == 0} {          set dateFormat {%Y-%m-%dT%H:%M:%S};       } elseif { [string compare $dateFormat {XML Time (%H:%M:%S)}] == 0} {          set dateFormat {%H:%M:%S};       } elseif { [string compare $dateFormat {Locale Date (%c)}] == 0} {          set dateFormat {%c};       };       set attrs [split {enddate,startdate} {,}];       foreach attr $attrs {          set date [string trim [FME_GetAttribute $attr]];          set dateLen [string length $date];          if {$dateLen > 0} {             set attrFull $attr;             append attrFull .full;             set fullDate [FME_GetAttribute $attrFull];             if { [string compare -length $dateLen $date $fullDate] == 0 } {                set extra [string range $fullDate $dateLen end]000000;                set date [format {%s %s:%s:%s} $date [string range $extra 0 1]                                                     [string range $extra 2 3]                                                     [string range $extra 4 5]];             } elseif {($dateLen == 14) && [regexp {^[0-9]*$} $date]} {                set date [format {%sT%s} [string range $date 0 7]                                         [string range $date 8 end]];             };          };          set seconds [clock scan $date];          FME_SetAttribute $attr [clock format $seconds -format $dateFormat];       };     } }
+FACTORY_DEF * TeeFactory    FACTORY_NAME DateFormatter    INPUT  FEATURE_TYPE TimeStamper_OUTPUT    OUTPUT FEATURE_TYPE DateFormatter_OUTPUT         @Tcl2(DateFormatter_formatter)
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "DateFormatter OUTPUT Splitter"   INPUT FEATURE_TYPE DateFormatter_OUTPUT   OUTPUT FEATURE_TYPE DateFormatter_OUTPUT_0_6PQpV4wJb0k=   OUTPUT FEATURE_TYPE DateFormatter_OUTPUT_1_6PQpV4wJb0k=
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FMEServerEmailGenerator INPUT Input Collector"   INPUT FEATURE_TYPE DateFormatter_OUTPUT_1_6PQpV4wJb0k=   OUTPUT FEATURE_TYPE FMEServerEmailGenerator_INPUT
+MACRO FMEServerEmailGenerator_WORKSPACE_NAME FMEServerEmailGenerator
+MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_XFORMER_NAME FMEServerEmailGenerator
+MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_TRANSFORMER_GROUP 
+MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)___COMPOUND_PARAMETERS 
+MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_SUB_DOC_NAME FMEServerEmailGenerator
+MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_to <at>Value<openparen>email<closeparen>
+MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_cc 
+MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_from subscribe-reprt-notify-demo@fmepedia2014-safe-software.fmecloud.com
+MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_replyto 
+MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_subject FMEpedia<space>demo:<space>FME<space>Server<space>alert<space>request<space>has<space>been<space>activated
+MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_subscriber_content <lt>p<gt>You<space><space>are<space>now<space>registered<space>to<space>receive<space>notifcation<space>alerts<space>from<space>$(SERVER_URL_HTML)index.html<space>at<space><at>Value<openparen>request_time<closeparen>.<space><lt><solidus>p<gt><lf><lf><lt>p<gt>The<space>details<space>of<space>the<space>request<space>are<space>as<space>follows:<space><lf><lf><lt>ul<gt><lf><lt>li<gt>email:<at>Value<openparen>email<closeparen><lt><solidus>li<gt><space><lf><lt>li<gt>StartDate:<space><at>Value<openparen>startdate<closeparen><lt><solidus>li<gt><lf><lt>li<gt>EndDate:<space><at>Value<openparen>enddate<closeparen><lt><solidus>li<gt><lf><lt>li<gt>QueryType:<at>Value<openparen>query_type<closeparen><lt><solidus>li<gt><lf><lf><lt>br<gt><lf>----<space><space>UNSUBSCRIBE<space><space>-----<space><lf><lf><lt>p<gt>To<space>unsubscribe<space>to<space>these<space>notifications<space>click<space>the<space>link<space>below.<lt><solidus>p<gt><lf><lf>$(URL)<solidus>fmejobsubmitter<solidus>$(repository_name)<solidus>subscription_delete.fmw?opt_servicemode=async<amp>subscriber_id=<at>Value<openparen>request_id<closeparen><amp>email_address=<at>Value<openparen>email<closeparen>
+MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_attachment_paths 
+DEFAULT_MACRO FMEServerEmailGenerator_WORKSPACE_NAME ""
+INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(FMEServerEmailGenerator_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(FMEServerEmailGenerator_WORKSPACE_NAME)}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT1405116243 Input Splitter"   INPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT"   OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT"
+# -------------------------------------------------------------------------
+
+Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_44d64668_0947_11e4_9fb5_bca0d036bcdf0_createDomain { in_domainName } {    set domainName $in_domainName;    if { {Local} == {Local} }    {       set xFormName [FME_EncodeText {$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_}];       set domainName $xFormName$domainName;    };    return $domainName; }
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_OUTPUT"         "_email_feature_id" @Count(fme_encoded,@Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_44d64668_0947_11e4_9fb5_bca0d036bcdf0_createDomain {counter}"), 0)
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_ParameterFetcher_doFetch {} {    foreach {name val} {"_email_from {$($(FMEServerEmailGenerator_WORKSPACE_NAME)_email_from$encode)} _email_replyto {$($(FMEServerEmailGenerator_WORKSPACE_NAME)_email_replyto)} _email_attachment_paths {$($(FMEServerEmailGenerator_WORKSPACE_NAME)_email_attachment_paths)} _email_cc {$($(FMEServerEmailGenerator_WORKSPACE_NAME)_email_cc)}"} {         if { [string match {*<at>*} $val] == 1 } {             set val [FME_Execute EvaluateExpression {STRING} $val {$(FMEServerEmailGenerator_WORKSPACE_NAME)_ParameterFetcher}];         } elseif {[string match {*FME_CONDITIONAL*} $val] == 1} {             set val [FME_Execute EvaluateExpression {STRING} $val {$(FMEServerEmailGenerator_WORKSPACE_NAME)_ParameterFetcher}];         } else {             set val [FME_DecodeTextOrAttr $val];         };       FME_SetAttribute [FME_DecodeText $name] $val    } }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_ParameterFetcher    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_OUTPUT"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_ParameterFetcher_OUTPUT"         @Tcl2($(FMEServerEmailGenerator_WORKSPACE_NAME)_ParameterFetcher_doFetch)
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeCreator INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_ParameterFetcher_OUTPUT" ATTR _email_to $($(FMEServerEmailGenerator_WORKSPACE_NAME)_email_to) ATTR _email_subject $($(FMEServerEmailGenerator_WORKSPACE_NAME)_email_subject) ATTR _email_subscriber_content $($(FMEServerEmailGenerator_WORKSPACE_NAME)_email_subscriber_content)    OUTPUT OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeCreator_OUTPUT" 
+# -------------------------------------------------------------------------
+FACTORY_DEF * XMLTemplaterFactory FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_JSONTemplater INPUT CONTROL_FEATURE FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeCreator_OUTPUT" INPUT DATA_FEATURE FEATURE_TYPE $(FMEServerEmailGenerator_WORKSPACE_NAME)_JSONTemplater_DataFeatures RESULT_ATTR text_line_data CONSECUTIVE_GROUPS NO BUCKET_ATTR_NAME __xml_templater_bucket__ CONTROL_TEMPLATE_EXPR <opencurly><lf><quote>email_to<quote>:<space>fme:get-attribute<openparen><quote>_email_to<quote><closeparen><comma><lf><quote>email_cc<quote>:<space>fme:get-attribute<openparen><quote>_email_cc<quote><closeparen><comma><lf><quote>email_from<quote>:<space>fme:get-attribute<openparen><quote>_email_from<quote><closeparen><comma><lf><quote>email_replyto<quote>:<space>fme:get-attribute<openparen><quote>_email_replyto<quote><closeparen><comma><lf><quote>email_subject<quote>:<space>fme:get-attribute<openparen><quote>_email_subject<quote><closeparen><comma><lf><quote>subscriber_content<quote>:<space>fme:get-attribute<openparen><quote>_email_subscriber_content<quote><closeparen><lf><closecurly> OUTPUT XML_DOCUMENT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_JSONTemplater_OUTPUT"
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_JSONTemplater_OUTPUT"    TEST _email_attachment_paths ATTRIBUTE_IS_EMPTY <Unused> ENCODED    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester_PASSED"    OUTPUT FAILED FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester_FAILED"
+# -------------------------------------------------------------------------
+
+Tcl2 set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_44d66706_0947_11e4_9fb5_bca0d036bcdf0_splitDelim [FME_DecodeText {<comma>}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_44d66706_0947_11e4_9fb5_bca0d036bcdf0_splitDelim]] }      {         set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_44d66706_0947_11e4_9fb5_bca0d036bcdf0_splitWidths [split [regsub -all {s$} {<comma>} {}] s];         proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_44d66706_0947_11e4_9fb5_bca0d036bcdf0_splitWidths;            set source [FME_GetAttribute {"_email_attachment_paths"}];            set attrNum 0;            set listName {_email_attachment_path_list};            set attrPos 0;            foreach width [set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_44d66706_0947_11e4_9fb5_bca0d036bcdf0_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               FME_SetAttribute "$listName{$attrNum}" [string trim $bit];               incr attrPos $width;               incr attrNum;            };         };      }      else      {         proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_44d66706_0947_11e4_9fb5_bca0d036bcdf0_splitDelim;            set delim [set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_44d66706_0947_11e4_9fb5_bca0d036bcdf0_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute {"_email_attachment_paths"}];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              set part [string range $source $startIndex [expr $nextIndex-1]];              if { $keepEmptyParts || $part != \"\" } {                 lappend bits $part;              };              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            set lastPart [string range $source $startIndex end];            if { $keepEmptyParts || $lastPart != \"\" } { lappend bits $lastPart };            set listName {_email_attachment_path_list};            set attrNum 0;            foreach bit $bits            {               FME_SetAttribute "$listName{$attrNum}" [string trim $bit];               incr attrNum;            }          }       }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester_FAILED"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_OUTPUT"         @Tcl2($(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_doSplit)
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * ElementFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_ListExploder    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_OUTPUT"    LIST_NAME "_email_attachment_path_list{}"    ELEMENT_NUMBER_FIELD "_element_index"    CLONE_GEOMETRY    MODE LEAN    OUTPUT ELEMENT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_ListExploder_LIST_FOUND"         @RemoveAttributes(ElementFactory.baseCloned)
+# -------------------------------------------------------------------------
+
+Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_44d67a3e_0947_11e4_9fb5_bca0d036bcdf0_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {_email_attachment_json}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_ListExploder_LIST_FOUND"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_OUTPUT"        @Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_44d67a3e_0947_11e4_9fb5_bca0d036bcdf0_doSetAttr {@EvaluateExpression(STRING_ENCODED,<quote>email_attachment<opencurly><at>Value<openparen>_element_index<closeparen><closecurly><quote>:<space><quote><at>Value<openparen>_email_attachment_path_list<closeparen><quote>,$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator)} ")
+
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_Aggregator_BREAK_ATTR
+INCLUDE [if {"No" == "Yes"} {puts {MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_Aggregator_BREAK_ATTR BREAK_BEFORE_FIELD_CHANGE _email_feature_id} }]
+FACTORY_DEF * AggregateFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_Aggregator    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_OUTPUT"    MODE ONE_LEVEL    GROUP_BY _email_feature_id    $($(FMEServerEmailGenerator_WORKSPACE_NAME)_Aggregator_BREAK_ATTR)    ACCUMULATE_ATTRIBUTES Yes    CONCATENATE_FIELDS _email_attachment_json    SEPARATOR <comma>    PRODUCE_MULTIS YES    OUTPUT AGGREGATE FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Aggregator_AGGREGATE"         @Geometry(SET_TO_CONTAIN_INDIVIDUAL_GEOMS, NO)
+
+# -------------------------------------------------------------------------
+
+MACRO casemac
+INCLUDE [ if { {NO} == {NO} } { puts {MACRO casemac -nocase}} ]
+Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_44d68de4_0947_11e4_9fb5_bca0d036bcdf0_replacer { findText replaceText invalidValue} {     set attrs [split \"_email_attachment_json\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       set noMatch true;       if {$length > 0} {          if {{NO} == {YES}} {             set newAttrVal [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             set newAttrVal [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };          if { $newAttrVal != $attrVal } {             set noMatch false;             FME_SetAttribute $attr $newAttrVal;          };       };       if {$noMatch} {          if { $invalidValue == {FME_NULL_VALUE} } {             FME_SetAttributeNull $attr;          } elseif { $invalidValue != {_FME_NO_OP_} }  {             FME_SetAttribute $attr [FME_DecodeText $invalidValue];          };       };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Aggregator_AGGREGATE"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_OUTPUT"         @Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_44d68de4_0947_11e4_9fb5_bca0d036bcdf0_replacer {<backslash>} {<backslash><backslash>} {_FME_NO_OP_}")
+
+# -------------------------------------------------------------------------
+
+MACRO casemac
+INCLUDE [ if { {NO} == {NO} } { puts {MACRO casemac -nocase}} ]
+Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_44d69910_0947_11e4_9fb5_bca0d036bcdf0_replacer { findText replaceText invalidValue} {     set attrs [split \"text_line_data\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       set noMatch true;       if {$length > 0} {          if {{NO} == {YES}} {             set newAttrVal [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             set newAttrVal [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };          if { $newAttrVal != $attrVal } {             set noMatch false;             FME_SetAttribute $attr $newAttrVal;          };       };       if {$noMatch} {          if { $invalidValue == {FME_NULL_VALUE} } {             FME_SetAttributeNull $attr;          } elseif { $invalidValue != {_FME_NO_OP_} }  {             FME_SetAttribute $attr [FME_DecodeText $invalidValue];          };       };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_OUTPUT"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_OUTPUT"         @Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_44d69910_0947_11e4_9fb5_bca0d036bcdf0_replacer {<closecurly>} {@EvaluateExpression(STRING_ENCODED,<comma><lf><at>Value<openparen>_email_attachment_json<closeparen><lf><closecurly>,$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer)} {_FME_NO_OP_}")
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(FMEServerEmailGenerator_WORKSPACE_NAME)_OUTPUT1405116243 Output Collector"   INPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_OUTPUT"   INPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester_PASSED"   OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_OUTPUT"
+INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(FMEServerEmailGenerator_WORKSPACE_NAME))}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FMEServerEmailGenerator OUTPUT Output Renamer/Nuker"   INPUT FEATURE_TYPE FMEServerEmailGenerator_OUTPUT   OUTPUT FEATURE_TYPE FMEServerEmailGenerator_OUTPUT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * ServerFactory    FACTORY_NAME FMEServerNotifier_2       INPUT  FEATURE_TYPE FMEServerEmailGenerator_OUTPUT    ACTION PUBLISH_TO_TOPIC    HOST "@EvaluateExpression(STRING,$(URL$encode),FMEServerNotifier_2)"    USERNAME "@EvaluateExpression(STRING,$(HTTP_AUTH_USERNAME$encode),FMEServerNotifier_2)"    PASSWORD "@EvaluateExpression(STRING,$(HTTP_AUTH_PASSWORD$encode),FMEServerNotifier_2)"    TOPIC "ems_subscribe_activated"    BODY "@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>text_line_data<closeparen>,FMEServerNotifier_2)"    OUTPUT OUTPUT FEATURE_TYPE FMEServerNotifier_2_OUTPUT    OUTPUT REJECTED FEATURE_TYPE FMEServerNotifier_2_<REJECTED>
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FMEServerNotifier_2 OUTPUT Output Nuker"   INPUT FEATURE_TYPE FMEServerNotifier_2_OUTPUT
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FMEServerNotifier_2 <REJECTED> Output Nuker"   INPUT FEATURE_TYPE FMEServerNotifier_2_<REJECTED>
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME TestFilter    INPUT  FEATURE_TYPE DateFormatter_OUTPUT_0_6PQpV4wJb0k=    OUTPUT FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_0
+
+FACTORY_DEF * TestFactory FACTORY_NAME TestFilter_TestFactory_0 INPUT FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_0 TEST @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>startdate<closeparen>,TestFilter) <= @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>current_date<closeparen>,TestFilter) ENCODED TEST @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>enddate<closeparen>,TestFilter) >= @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>current_date<closeparen>,TestFilter) ENCODED BOOLEAN_OPERATOR AND COMPOSITE_TEST_EXPR <Unused> OUTPUT PASSED FEATURE_TYPE TestFilter_Active OUTPUT FAILED FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_1
+FACTORY_DEF * TestFactory FACTORY_NAME TestFilter_TestFactory_1 INPUT FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_1 TEST @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>startdate<closeparen>,TestFilter) > @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>current_date<closeparen>,TestFilter) ENCODED BOOLEAN_OPERATOR OR COMPOSITE_TEST_EXPR <Unused> OUTPUT PASSED FEATURE_TYPE TestFilter_Future OUTPUT FAILED FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_2
+FACTORY_DEF * TeeFactory FACTORY_NAME TestFilter_<lt>UNFILTERED<gt> INPUT FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_2 OUTPUT FEATURE_TYPE TestFilter_<lt>UNFILTERED<gt>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "TestFilter Active Splitter"   INPUT FEATURE_TYPE TestFilter_Active   OUTPUT FEATURE_TYPE TestFilter_Active_0_Pt60+6/cvRA=   OUTPUT FEATURE_TYPE TestFilter_Active_1_Pt60+6/cvRA=
+FACTORY_DEF * TeeFactory   FACTORY_NAME "TestFilter Future Splitter"   INPUT FEATURE_TYPE TestFilter_Future   OUTPUT FEATURE_TYPE TestFilter_Future_0_E/PVNHZRaT0=   OUTPUT FEATURE_TYPE TestFilter_Future_1_E/PVNHZRaT0=
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "TestFilter_Active_0_Pt60+6/cvRA= -> EMSActiveSubscriptions Correlator"    INPUT FEATURE_TYPE TestFilter_Active_0_Pt60+6/cvRA=    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GOOGLEFUSIONTABLES)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,EMSActiveSubscriptions)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "TestFilter_Future_1_E/PVNHZRaT0= -> EMSFutureSubscriptions Correlator"    INPUT FEATURE_TYPE TestFilter_Future_1_E/PVNHZRaT0=    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GOOGLEFUSIONTABLES)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,EMSFutureSubscriptions)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "TestFilter_Future_0_E/PVNHZRaT0= -> EMSSubscriptionRequest Correlator"    INPUT FEATURE_TYPE TestFilter_Future_0_E/PVNHZRaT0=    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GOOGLEFUSIONTABLES)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,EMSSubscriptionRequest)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "TestFilter_Active_1_Pt60+6/cvRA= -> EMSSubscriptionRequest Correlator"    INPUT FEATURE_TYPE TestFilter_Active_1_Pt60+6/cvRA=    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GOOGLEFUSIONTABLES)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,EMSSubscriptionRequest)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "TestFilter_<lt>UNFILTERED<gt> -> EMSSubscriptionRequest Correlator"    INPUT FEATURE_TYPE TestFilter_<lt>UNFILTERED<gt>    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GOOGLEFUSIONTABLES)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,EMSSubscriptionRequest)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Final Output Feature Type Router"   INPUT FEATURE_TYPE *   TEST @Value(__wb_out_feat_type__) != ""   OUTPUT PASSED FEATURE_TYPE *     @FeatureType(@Value(__wb_out_feat_type__))   OUTPUT FAILED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+GOOGLEFUSIONTABLES_1_DEF EMSActiveSubscriptions   googlefusiontables_type      <NO_GEOMETRY>   googlefusiontables_drop_table No   googlefusiontables_truncate_table No   googlefusiontables_geometry_columns <lt>Unused<gt>   googlefusiontables_mode      INHERIT_FROM_WRITER   googlefusiontables_update_key_columns ""   email                        text   enddate                      datetime   request_id                   text   request_time                 datetime   startdate                    datetime   query_type                   text
+# -------------------------------------------------------------------------
+GOOGLEFUSIONTABLES_1_DEF EMSFutureSubscriptions   googlefusiontables_type      <NO_GEOMETRY>   googlefusiontables_drop_table No   googlefusiontables_truncate_table No   googlefusiontables_geometry_columns <lt>Unused<gt>   googlefusiontables_mode      INHERIT_FROM_WRITER   googlefusiontables_update_key_columns ""   email                        text   enddate                      datetime   request_id                   text   request_time                 datetime   startdate                    datetime   query_type                   text
+# -------------------------------------------------------------------------
+GOOGLEFUSIONTABLES_1_DEF EMSSubscriptionRequest   googlefusiontables_type      googlefusiontables_no_geom   googlefusiontables_drop_table No   googlefusiontables_truncate_table No   googlefusiontables_geometry_columns geom   googlefusiontables_mode      DELETE   googlefusiontables_update_key_columns email<comma>request_id   email                        text   wkt                          text   request_id                   text   request_time                 text   enddate                      text   startdate                    text   query_type                   text

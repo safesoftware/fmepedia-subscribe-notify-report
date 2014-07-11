@@ -1,9 +1,9 @@
 
 /* The Google Maps Object */
 
-var fmeserverurl = "demo.fmeserver.com";
+var fmeserverurl = "fmepedia2014-safe-software.fmecloud.com";
 
-      var token = "7ef84feb2d8553c89e3f803052c340bd252b0e08";
+      var token = "8be243c0fc2f5f34977050bdab57ebbdd3e72aa2";
 
       var map;
 
@@ -137,7 +137,7 @@ var fmeserverurl = "demo.fmeserver.com";
           $('#mapWarningModal').modal();
 
         } else {
-          var url = "http://" + fmeserverurl + "/fmerest/notifier/topics/ems_subscribe/publish?token=" + token;
+          var url = "https://" + fmeserverurl + "/fmerest/v2/notifications/topics/ems_subscribe/message/raw?token=" + token;
           /* Create the JSON object */
           var jsonObj = { };
           jsonObj["wkt"] = generateWktStr();
