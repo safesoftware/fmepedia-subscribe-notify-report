@@ -23,12 +23,11 @@ function loadConfig() {
     fmeserverurl = config.initObject.server;
     token = config.initObject.token;
   });
+	initialize();
 }
 
 
 function initialize() {
-  
-
 
   /* Start - JQuery Toole Form Setup */
   $("input.slider-event").slider({
